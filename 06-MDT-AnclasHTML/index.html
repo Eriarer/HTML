@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Anclas</title>
+    </head>
+    <style>
+        body {
+            background-color: rgb(218, 221, 255);
+            width: 70%; /* Es el 70% del ancho de la pantalla */
+            text-align: justify;
+            margin: 0 auto;
+        }
+        div {
+            padding: 10px;
+        }
+        ul {
+            list-style: none;
+        }
+        li {
+            font-size: 24px;
+        }
+        div#piepagina,
+        div#encabezado {
+            background-color: rgb(189, 180, 224);
+            text-align: center;
+        }
+        div#seccion {
+            background-color: rgb(189, 180, 224);
+        }
+        div#menu {
+            background-color: rgb(175, 165, 212);
+        }
+        img {
+            padding: 5px;
+        }
+        h3,
+        h2 {
+            background-color: rgb(189, 180, 224);
+            text-align: center;
+            font-size: 24px;
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, "sans-serif";
+        }
+    </style>
+    <body>
+        <!-- div#encabezado -->
+        <div id="encabezado">
+            <h2>ArchLinux</h2>
+            <img
+                src="Images/Archlinux-logo-standard-version.png"
+                alt="Arch Linux Logo"
+                width="200"
+            />
+            <h3>Melgoza de la Torre Abrham</h3>
+        </div>
+        <div id="menu">
+            <h2>Indice</h2>
+            <ul>
+                <li><a href="#arch">Que es ArchLinux</a></li>
+                <li><a href="#seccion1">Título 1</a></li>
+                <ul>
+                    <li><a href="#seccion2">Título 2 </a></li>
+                    <li><a href="#seccion3">Título 3</a></li>
+                    <li><a href="#seccion4">Título 4</a></li>
+                </ul>
+            </ul>
+        </div>
+        <div id="seiccion">
+            <div>
+                <h3 id="arch">¿Qué es ArchLinux?</h3>
+                <p></p>
+                <a href="#menu">Menu</a>
+                <h2>PRINCIPIOS</h2>
+            </div>
+            <div>
+                <h3 id="seiccion1">Título 1</h3>
+                <p></p>
+                <a href="#menu">Menu</a>
+            </div>
+            <div>
+                <h3 id="seiccion2">Título 2</h3>
+                <p></p>
+                <a href="#menu">Menu</a>
+            </div>
+            <div>
+                <h3 id="seiccion3">Título 3</h3>
+                <p></p>
+                <a href="#menu">Menu</a>
+            </div>
+            <div>
+                <h3 id="seiccion3">Título 4</h3>
+                <p></p>
+                <a href="#menu">Menu</a>
+            </div>
+        </div>
+        <div id="piepagina"></div>
+    </body>
+</html>
