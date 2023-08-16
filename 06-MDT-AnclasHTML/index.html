@@ -1,100 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Anclas</title>
-    </head>
-    <style>
-        body {
-            background-color: rgb(218, 221, 255);
-            width: 70%; /* Es el 70% del ancho de la pantalla */
-            text-align: justify;
-            margin: 0 auto;
-        }
-        div {
-            padding: 10px;
-        }
-        ul {
-            list-style: none;
-        }
-        li {
-            font-size: 24px;
-        }
-        div#piepagina,
-        div#encabezado {
-            background-color: rgb(189, 180, 224);
-            text-align: center;
-        }
-        div#seccion {
-            background-color: rgb(189, 180, 224);
-        }
-        div#menu {
-            background-color: rgb(175, 165, 212);
-        }
-        img {
-            padding: 5px;
-        }
-        h3,
-        h2 {
-            background-color: rgb(189, 180, 224);
-            text-align: center;
-            font-size: 24px;
-            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-                "Lucida Sans Unicode", Geneva, Verdana, "sans-serif";
-        }
-    </style>
-    <body>
-        <!-- div#encabezado -->
-        <div id="encabezado">
-            <h2>ArchLinux</h2>
-            <img
-                src="Images/Archlinux-logo-standard-version.png"
-                alt="Arch Linux Logo"
-                width="200"
-            />
-            <h3>Melgoza de la Torre Abrham</h3>
-        </div>
-        <div id="menu">
-            <h2>Indice</h2>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anclas</title>
+</head>
+<style>
+    body {
+        background-color: rgb(218, 221, 255);
+        width: 70%;
+        /* Es el 70% del ancho de la pantalla */
+        text-align: justify;
+        margin: 0 auto;
+    }
+
+    div {
+        padding: 10px;
+    }
+
+    a {
+        /* delete subline on hiperlinks */
+        color: rgb(72, 72, 208);
+        text-decoration: none;
+    }
+
+    span {
+        color: red;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li {
+        font-size: 24px;
+    }
+
+    div#piepagina,
+    div#encabezado {
+        background-color: rgb(189, 180, 224);
+        text-align: center;
+        border-color: black;
+        border-width: 8px;
+        border-style: groove;
+    }
+
+    div#seccion {
+        background-color: rgb(189, 180, 224);
+    }
+
+    div#menu {
+        background-color: rgb(175, 165, 212);
+    }
+
+    img {
+        padding: 5px;
+    }
+
+    h3,
+    h2,
+    h1 {
+        background-color: rgb(152, 138, 208);
+        text-align: center;
+        font-size: 24px;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+            "Lucida Sans Unicode", Geneva, Verdana, "sans-serif";
+    }
+
+    div.row {
+        display: flex;
+    }
+
+    div.twoCol {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <!-- div#encabezado -->
+    <div id="encabezado">
+        <h2 style="margin-left: -10px; margin-right: -10px;">ArchLinux</h2>
+        <img src="Images/Archlinux-logo-standard-version.png" alt="Arch Linux Logo Long" width="200" />
+        <h3 style="margin-left: -10px; margin-right: -10px;">Melgoza de la Torre Abrham</h3>
+    </div>
+    <div id="menu">
+        <h2 style="margin: -10px; margin-top: -5px">Indice</h2>
+        <ul>
+            <li><a href="#arch">Que es ArchLinux</a></li>
+            <li><a href="#principios">Principios</a></li>
             <ul>
-                <li><a href="#arch">Que es ArchLinux</a></li>
-                <li><a href="#seccion1">Título 1</a></li>
-                <ul>
-                    <li><a href="#seccion2">Título 2 </a></li>
-                    <li><a href="#seccion3">Título 3</a></li>
-                    <li><a href="#seccion4">Título 4</a></li>
-                </ul>
+                <li><a href="#seccion1">Simplicidad</a></li>
+                <li><a href="#seccion2">Modernidad</a></li>
+                <li><a href="#seccion3">Pragmatismo</a></li>
+                <li><a href="#seccion4">Centrado al usuario</a></li>
             </ul>
+        </ul>
+    </div>
+    <div id="seccion">
+        <div>
+            <h3 id="arch" style="
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    margin-top: -30px;
+                ">
+                ¿Qué es ArchLinux?
+            </h3>
+            <p>
+                Arch Linux es una distribución <span>GNU</span>/<span>Linux</span>
+                de propósito general, desarrollada independientemente para
+                <span>x86-64</span>, que se esfuerza por proporcionar las
+                últimas versiones estables de la mayoría del software,
+                siguiendo un modelo de lanzamiento continuo
+                (rolling-release). La instalación por defecto deja un
+                sistema de base mínima, que el usuario configurará
+                posteriormente agregando lo que necesite.
+            </p>
+            <a href="#menu">Menu</a>
         </div>
-        <div id="seiccion">
-            <div>
-                <h3 id="arch">¿Qué es ArchLinux?</h3>
-                <p></p>
+        <div>
+            <h1 id="principios" style="
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    margin-top: -10px;
+                ">
+                PRINCIPIOS
+                </h2>
+                <h3 id="seccion1" style="
+                    margin-left: -20px;
+                    margin-right: -20px;
+                    margin-top: -20px;
+                ">
+                    Simplicidad
+                </h3>
+                <div class="row" style="margin-top: -50px">
+                    <div class="twoCol">
+                        <p style="margin-left: -20px; margin-right: -30px">
+                            Arch Linux define <span>simplicidad</span> como sin adiciones o
+                            modificaciones innecesarias. El software es lanzado
+                            por los desarrolladores originales (upstream) con
+                            cambios mínimos (downstream) específicos para la
+                            distribución en cuestión: se evitan los parches no
+                            aceptados por upstream, y los parches downstream de
+                            Arch consisten, casi en su totalidad, en
+                            correcciones de errores backports que han quedado
+                            desfasados por el próximo lanzamiento del proyecto.
+                        </p>
+                    </div>
+                    <div class="twoCol">
+                        <img src="Images/archlinux-512.webp" alt="Arch logo Short" width="200" style="
+                            margin-top: 10px;
+                            margin-left: 30px;
+                            margin-right: -100px;
+                        " 
+                        />
+                    </div>
+                </div>
+                <p style="margin-top: -20px">
+                    De un modo similar, los archivos de configuración de Arch
+                    proporcionados por los desarrolladores contienen cambios
+                    limitados relativos a cuestiones específicas de la
+                    distribución, como el ajuste de las rutas de los archivos
+                    del sistema. No añade características de automatización,
+                    tales como activar un servicio simplemente porque se ha
+                    instalado el paquete. <br /><br />Los <span>paquetes</span> son
+                    únicamente divididos cuando existen ventajas convincentes,
+                    como por ejemplo para ahorrar espacio en disco, en
+                    particular con casos de generar acumulación de residuos. No
+                    se proporcionan oficialmente utilidades de configuración
+                    gráficas, animando al usuario a realizar la mayor parte de
+                    la configuración del sistema desde un terminal y con un
+                    editor de texto.
+                </p>
                 <a href="#menu">Menu</a>
-                <h2>PRINCIPIOS</h2>
-            </div>
-            <div>
-                <h3 id="seiccion1">Título 1</h3>
-                <p></p>
-                <a href="#menu">Menu</a>
-            </div>
-            <div>
-                <h3 id="seiccion2">Título 2</h3>
-                <p></p>
-                <a href="#menu">Menu</a>
-            </div>
-            <div>
-                <h3 id="seiccion3">Título 3</h3>
-                <p></p>
-                <a href="#menu">Menu</a>
-            </div>
-            <div>
-                <h3 id="seiccion3">Título 4</h3>
-                <p></p>
-                <a href="#menu">Menu</a>
-            </div>
         </div>
-        <div id="piepagina"></div>
-    </body>
+        <div>
+            <h3 id="seccion2" style="margin-left: -20px; margin-right: -20px">
+                Modernidad
+            </h3>
+            <p>
+                Arch Linux se esfuerza por mantener las últimas versiones
+                estables liberadas de software, siempre y cuando no causen
+                errores del sistema en la medida que pueda evitarse
+                razonablemente. Se basa en un sistema lanzamiento continuo,
+                que permite una instalación de una sola vez con
+                actualizaciones continuas.
+                <br /><br />Arch incorpora muchas de las nuevas tecnologías
+                disponibles para los usuarios de GNU/Linux, incluyendo el
+                sistema de inicio systemd, sistemas de archivos modernos,
+                <span>LVM2</span>, software <span>RAID</span>, soporte para <span>udev</span> e initcpio (con
+                mkinitcpio), así como las últimas versiones de kernel
+                disponibles.
+            </p>
+            <a href="#menu">Menu</a>
+        </div>
+        <div>
+            <h3 id="seccion3" style="margin-left: -20px; margin-right: -20px">
+                Pragmatismo
+            </h3>
+            <p>
+                Arch es una distribución <span>pragmática</span> antes que idealista. Los
+                principios aquí solo sirven como directrices útiles. En
+                última instancia, las decisiones de diseño se realizan caso
+                por caso a través de un desarrollo consensuado. Las técnicas
+                de análisis se basan en la evidencia y los debates, no en la
+                política o las opiniones públicas.
+
+                <br /><br />Se ofrece un gran número de paquetes y script de
+                <span>compilación</span> en los diferentes repositorios de Arch Linux
+                tanto de software libre y de código abierto para aquellos
+                que lo prefieran, así como de software propietario para
+                aquellos que abrazan la funcionalidad sobre la ideología.
+            </p>
+            <a href="#menu">Menu</a>
+        </div>
+        <div>
+            <h3 id="seccion4" style="margin-left: -20px; margin-right: -20px">
+                Centrado en el usuario
+            </h3>
+            <p>
+                Mientras que muchas distribuciones de GNU/Linux intentan ser
+                fáciles de usar, Arch Linux siempre ha pretendido y pretende
+                permanecer centrado en el <span>usuario</span>. La distribución está
+                destinada a cubrir las necesidades de aquellos usuarios que
+                contribuyen a ella, en lugar de tratar de atraer a la mayor
+                cantidad posible de usuarios. Está dirigida a usuarios
+                competentes en GNU/Linux, o a cualquier persona con una
+                actitud <span>«do-it-yourself»</span> que esté dispuesta a leer la
+                documentación y resolver por sí misma los problemas.
+                <br /><br />Todos los usuarios están invitados a participar
+                y contribuir con la distribución. Informar y ayudar a
+                arreglar errores es altamente valorada y, los parches de
+                mejora de paquetes o los proyectos de core, son muy
+                apreciados: los desarrolladores de Arch, a menudo,
+                comenzaron siendo voluntarios y activos contribuyentes antes
+                de formar parte de ese equipo. <br /><br />Los <span>Archers</span>
+                pueden contribuir libremente con paquetes en Arch User
+                Repository, mejorar la documentación de ArchWiki,
+                proporcionar asistencia técnica a los demás usuarios o
+                simplemente intercambiar opiniones en los foros, listas de
+                correos o Canales IRC. Arch Linux es el sistema operativo
+                elegido por muchas personas en todo el mundo, y existen
+                varias comunidades internacionales que ofrecen ayuda y
+                traducen la documentación a muchos idiomas diferentes.
+            </p>
+            <a href="#menu">Menu</a>
+        </div>
+    </div>
+    <div id="piepagina">
+        <p>
+            16 de Agosto de 2023
+            <br />
+            Referencias:
+            <a href="https://wiki.archlinux.org/title/Arch_Linux_(Espa%C3%B1ol)">ArchLinux</a>
+        </p>
+    </div>
+</body>
+
 </html>
