@@ -1,117 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="widtr=device-widtr, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="widtr=device-widtr, initial-scale=1.0"
+    />
     <title>Document</title>
-</head>
-<style>
-    body{
-        background-color: #eee;
-        /* alinear al centro todo  */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+  </head>
+  <style>
+    body {
+      background-color: #eee;
+      /* alinear al centro todo  */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    caption{
-        font-size: 40px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
+
+    caption {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: Arial, Helvetica, sans-serif;
     }
-    table{
-        margin: 10px;
-        border: 5px solid black;
-        border-collapse: collapse;
-        width: 80%;
+
+    table {
+      margin: 10px;
+      border: 5px solid black;
+      border-collapse: collapse;
+      width: 80%;
     }
-    caption{
-        background-color: #000000;
-        color: #fff;
-        font-size: 40px;
-        font-weight: bold;
+
+    caption {
+      background-color: #000000;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
     }
-    td,th{
-        border: 1px solid black;
-        padding: 10px;
-        text-align: center;
+
+    td,
+    th {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: center;
     }
-    th{
-        background-color: #ccc;
+
+    th {
+      background-color: #ccc;
     }
-    td:hover{
-        background-color: #ccc;
+
+    td:hover {
+      background-color: #ccc;
     }
-    h2,h1{
-        margin: 0;
+
+    h2,
+    h1 {
+      margin: 0;
     }
-    div.title{
-        background-color: #000000;
-        color: #fff;
-        padding: 10px;
-        margin-top: -10px;
-        text-align: center;
-        width: 100%;
+
+    div.title {
+      background-color: #000000;
+      color: #fff;
+      padding: 10px;
+      margin-top: -10px;
+      text-align: center;
+      width: 100%;
     }
-    td#pseudoEncabezado{
-        background: #ccc; 
-        font-size: 20px;
+
+    td#pseudoEncabezado {
+      background: #ccc;
+      font-size: 20px;
     }
-</style>
-<body>
+  </style>
+
+  <body>
     <div class="title">
-        <h2>Práctica de tablas</h2>
-        <h1>Melgoza de la Torre Abraham</h1>
+      <h2>Práctica de tablas</h2>
+      <h1>Melgoza de la Torre Abraham</h1>
     </div>
     <!-- table>caption{Titulo}+tr>th{titulo}*4+tr*4>td{🟢🟢🟢🟢}*4 -->
     <table>
-        <caption>REDES SOCIALES</caption>
-        <tr>
-            <th style="background: #2f2f2f; color: #fff;">Característica</th>
-            <th><img src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-4-1.png" width="40px"></th>
-            <th><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png" width="50"></th>
-            <th><img src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg" width="50px"></th>
-            <tr>
-                <td id="pseudoEncabezado">Popularidad</td>
-                <td>🟢🟢🟠🟠</td>
-                <td>🟢🟢🟢🟢</td>
-                <td>🟢🟢🟢🟠</td>
-            </tr>
-            <tr>
-                <td id="pseudoEncabezado">Velocidad</td>
-                <td>🟢🟢🟢🟢</td>
-                <td>🟢🟠🟠🟠</td>
-                <td>🟢🟢🟢🔴</td>
-            </tr>
-            <tr>
-                <td id="pseudoEncabezado">Privacidad</td>
-                <td>🟢🟢🟢🟠</td>
-                <td>🟢🟠🟠🔴</td>
-                <td>🟢🟢🟠🟠</td>
-            </tr>
-            <tr>
-                <td id="pseudoEncabezado">Interfaz de usuario</td>
-                <td>🟢🟢🟢🟠</td>
-                <td>🟢🟢🟠🔴</td>
-                <td>🟢🟢🟢🔴</td>
-            </tr>
-        </tr>
-    </table>
-    <button onclick="cerrar()" style="margin-top: 20px;">salir</button>
-    <script>
-        function cerrar(){
-            // preguntar si quiere salir
-            const salir = confirm("¿Desea salir de la página?");
-            // si la respuesta es si
-            if(salir){
-                // redireccionar a google
-                alert("Gracias por visitarnos");
-                window.location.href = "https://www.google.com.mx/";
-            }else{
-                alert("Gracias por quedarte");
-            }
+      <caption>
+        REDES SOCIALES
+      </caption>
+      <tr>
+        <th style="background: #2f2f2f; color: #fff">Característica</th>
+        <th>
+          <img
+            src="https://logodownload.org/wp-content/uploads/2017/11/discord-logo-4-1.png"
+            width="40px"
+          />
+        </th>
+        <th>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png"
+            width="50"
+          />
+        </th>
+        <th>
+          <img
+            src="https://cdn.worldvectorlogo.com/logos/telegram-1.svg"
+            width="50px"
+          />
+        </th>
+      </tr>
 
+      <tr>
+        <td id="pseudoEncabezado">Popularidad</td>
+        <td>🟢🟢🟠🟠</td>
+        <td>🟢🟢🟢🟢</td>
+        <td>🟢🟢🟢🟠</td>
+      </tr>
+      <tr>
+        <td id="pseudoEncabezado">Velocidad</td>
+        <td>🟢🟢🟢🟢</td>
+        <td>🟢🟠🟠🟠</td>
+        <td>🟢🟢🟢🔴</td>
+      </tr>
+      <tr>
+        <td id="pseudoEncabezado">Privacidad</td>
+        <td>🟢🟢🟢🟠</td>
+        <td>🟢🟠🟠🔴</td>
+        <td>🟢🟢🟠🟠</td>
+      </tr>
+      <tr>
+        <td id="pseudoEncabezado">Interfaz de usuario</td>
+        <td>🟢🟢🟢🟠</td>
+        <td>🟢🟢🟠🔴</td>
+        <td>🟢🟢🟢🔴</td>
+      </tr>
+    </table>
+    <button
+      onclick="cerrar()"
+      style="margin-top: 20px"
+    >
+      salir
+    </button>
+    <script>
+      function cerrar() {
+        // preguntar si quiere salir
+        const salir = confirm("¿Desea salir de la página?");
+        // si la respuesta es si
+        if (salir) {
+          // redireccionar a google
+          alert("Gracias por visitarnos");
+          window.location.href = "https://www.google.com.mx/";
+        } else {
+          alert("Gracias por quedarte");
         }
+      }
     </script>
-</body>
+  </body>
 </html>
