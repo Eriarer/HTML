@@ -2,16 +2,18 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 30px;
     background-color: #c4c4c4;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-  }
+}
 
   table {
     margin: 20px;
     width: 200px;
     height: 200px;
+    float: left;
   }
 
   .colFusion {
@@ -29,8 +31,10 @@ body {
   .bothFusion {
     border: 10px solid rgb(0, 191, 208);
     text-align: center;
+    border-radius: 10px;
   }
 
   th.bothFusion, td.bothFusion{
     border: 3px solid rgb(4, 15, 16);
+    border-radius: 0px;
   } 
