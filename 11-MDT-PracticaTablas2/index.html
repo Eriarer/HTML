@@ -2,38 +2,202 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Table Practice</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        background-color: #c4c4c4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      table {
+        margin: 20px;
+        width: 200px;
+        height: 200px;
+      }
+      .colFusion {
+        border: 1px solid rgb(180, 4, 4);
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .rowFusion {
+        border: 1px solid rgb(118, 185, 1);
+        border-collapse: collapse;
+        text-align: center;
+      }
+
+      .bothFusion {
+        border: 1px solid rgb(0, 191, 208);
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
+    <h1 id="MyName">Melgoza de la Torre Abraham</h1>
     <!-- Fusion de columnas -->
-    <table>
+    <table class="colFusion">
       <caption>
         Fusión de columnas
       </caption>
-      <tr>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+      <tr class="colFusion">
+        <td
+          class="colFusion"
+          colspan="3"
+        >
+          A
+        </td>
+        <td class="colFusion">B</td>
       </tr>
-      <tr>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+      <tr class="colFusion">
+        <td class="colFusion">C</td>
+        <td
+          class="colFusion"
+          colspan="2"
+        >
+          D
+        </td>
+        <td class="colFusion">E</td>
       </tr>
-      <tr>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+      <tr class="colFusion">
+        <td
+          class="colFusion"
+          colspan="4"
+        >
+          F
+        </td>
       </tr>
-      <tr>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
-        <td>test</td>
+      <tr class="colFusion">
+        <td
+          class="colFusion"
+          style="background: cadetblue"
+        >
+          G
+        </td>
+        <td
+          class="colFusion"
+          style="background: cadetblue"
+        >
+          H
+        </td>
+        <td
+          class="colFusion"
+          style="background: cadetblue"
+        >
+          I
+        </td>
+        <td
+          class="colFusion"
+          style="background: cadetblue"
+        >
+          J
+        </td>
+      </tr>
+    </table>
+
+    <!-- Fusion de filas -->
+    <table class="rowFusion">
+      <caption>
+        Fusion de Filas
+      </caption>
+      <tr class="rowFusion">
+        <td class="rowFusion">A</td>
+        <td class="rowFusion">B</td>
+        <td
+          class="rowFusion"
+          rowspan="3"
+          style="background: cadetblue"
+        >
+          C
+        </td>
+        <td class="rowFusion">D</td>
+      </tr>
+      <tr class="rowFusion">
+        <td
+          class="rowFusion"
+          rowspan="2"
+          style="background: cadetblue"
+        >
+          E
+        </td>
+        <td class="rowFusion">F</td>
+        <td
+          class="rowFusion"
+          rowspan="3"
+          style="background: cadetblue"
+        >
+          G
+        </td>
+      </tr>
+      <tr class="rowFusion">
+        <td
+          class="rowFusion"
+          style="background: cadetblue"
+        >
+          H
+        </td>
+      </tr>
+      <tr class="rowFusion">
+        <td class="rowFusion">I</td>
+        <td class="rowFusion">J</td>
+        <td class="rowFusion">K</td>
+      </tr>
+    </table>
+
+    <!-- Fusion de filas y columnas -->
+    <table class="bothFusion">
+      <caption>
+        Fusion de filas y columnas
+      </caption>
+      <tr class="bothFusion">
+        <td
+          class="bothFusion"
+          colspan="2"
+          style="background: cadetblue"
+        >
+          A
+        </td>
+        <td class="bothFusion">B</td>
+        <td class="bothFusion">C</td>
+      </tr>
+      <tr class="bothFusion">
+        <td
+          class="bothFusion"
+          rowspan="3"
+          style="background: cadetblue"
+        >
+          D
+        </td>
+        <td
+          class="bothFusion"
+          colspan="2"
+          style="background: cadetblue"
+        >
+          E
+        </td>
+        <td class="bothFusion">F</td>
+      </tr>
+      <tr class="bothFusion">
+        <td class="bothFusion">G</td>
+        <td
+          class="bothFusion"
+          colspan="2"
+          style="background: cadetblue"
+        >
+          H
+        </td>
+      </tr>
+      <tr class="bothFusion">
+        <td class="bothFusion">I</td>
+        <td class="bothFusion">J</td>
+        <td class="bothFusion">K</td>
       </tr>
     </table>
   </body>
