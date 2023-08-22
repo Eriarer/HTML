@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body onload="format()">
+    <h1>Melgoza de la Torre Abraham</h1>
+    <div class="KyeboardLayout">
+      <h2 class="KyeboardLayout">A KEYBOAR DISTRIBUTION GUIDE</h2>
+      <table id="Layout">
+        <tr>
+          <th colspan="2">Staggered</th>
+          <td></td>
+          <th colspan="2">Ortholinear</th>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <img
+              src="Images/Stagered.png"
+              alt="Staggered layout"
+              width="80%"
+              class="zoom"
+            />
+          </td>
+          <td></td>
+          <td colspan="2">
+            <img
+              src="Images/ortholinear.png"
+              alt="Ortholinear layout"
+              width="80%"
+              class="zoom"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button
+              type="button"
+              onclick="stag()"
+            >
+              MORE INFO
+            </button>
+          </td>
+          <td>
+            <button
+              type="button"
+              onclick="overview()"
+            >
+              OVERVIEW
+            </button>
+          </td>
+          <td colspan="2">
+            <button
+              type="button"
+              onclick="ortho()"
+            >
+              MORE INFO
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div id="General">
+      <table id="genInfo">
+        <tr>
+          <th colspan="2">Why this discussion</th>
+        </tr>
+        <tr>
+          <td>Why is imporant?</td>
+          <td>What should consider?</td>
+        </tr>
+        <tr>
+          <td>
+            <p>
+              A keyboard is one of the primary input devices used with a
+              computer. <br />
+              Being able to use a keyboard comfortably can make a big difference
+              in your comfort level and productivity. <br />
+              When you're buying a new keyboard, it's important to make sure
+              that it will meet your needs. <br />Choosing a good keyboard can
+              have a big impact on your typing speed, acuaracy, and overall
+              comfort while typing, but most imporant on your health; because a
+              bad keyboard can cause you a lot of pain in your hands, wrists,
+              and arms.
+            </p>
+          </td>
+          <td>
+            <p>
+              There are many factors to consider when choosing a keyboard, such
+              as the size, durability, and software support and layout. <br />
+            </p>
+            <details>
+              <summary>Size</summary>
+              <p>
+                The size of the keyboard refers to the number of keys and
+                additional features like a numeric keypad, media keys, and more.
+              </p>
+            </details>
+            <details>
+              <summary>Durability</summary>
+              <p>
+                The durability of the keyboard refers to how long it will last
+                before the keys stop working or the keyboard breaks, ther are
+                many options
+              </p>
+            </details>
+            <details>
+              <summary>Software support</summary>
+              <p>
+                The software support of the keyboard refers to the ability to
+                customize the keyboard, most common being RGB lighting and macro
+                keys.
+              </p>
+            </details>
+            <details>
+              <summary>Layout</summary>
+              <p>
+                The layout of the keyboard refers to the way the keys are
+                arranged. Is the most important factor to consider when buying a
+                keyboard, because it will determine how comfortable you are
+                while typing.
+              </p>
+            </details>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="Staggered">
+      <table class="Comparation">
+        <tr>
+          <th>What it is?</th>
+          <td>
+            A staggered keyboard is typical for many keyboards, including your
+            built-in laptop keyboard. It comes from the design of the vintage
+            typewriter wherein each key must avoid bumping into one another for
+            smooth registration.
+          </td>
+        </tr>
+        <tr>
+          <th>PROS</th>
+          <th>CONS</th>
+        </tr>
+        <tr>
+          <!-- Pros -->
+          <td>
+            <ul>
+              <li>It is the most common layout</li>
+              <li>
+                It is easy to type on as you are already used to its layout.
+              </li>
+              <li>
+                There is no learning curve should you decide to acquire a
+                staggered external keyboard.
+              </li>
+              <li>The market is also much more saturated.</li>
+              <li>
+                more customization options are available when using a staggered
+                keyboard. Keyboard plates and foams come pre-cut to fit
+                staggered keyboards more often than not.
+              </li>
+              <li>Most of the case's they are cheaper.</li>
+            </ul>
+          </td>
+          <!-- Cons -->
+          <td>
+            <ul>
+              <li>Staggered is not the most ergonomic layout.</li>
+              <li>
+                It is not the most efficient layout. You will experience more
+                finger travel and finger fatigue when typing on a staggered.
+              </li>
+              <li>
+                Staggered keyborad is bigger than ortholinear, making it less
+                portable and taking more desktop space.
+              </li>
+              <li>
+                There is no reason that the keyboard layout should still be
+                staggered.
+              </li>
+              <li>
+                Staggered layout keyboards may not be as unique and novelty as
+                ortholinear keyboards
+              </li>
+              <li>Staggered keyboard are difficult to repair.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="Ortho">
+      <table class="Comparation">
+        <tr>
+          <th>What it is?</th>
+          <td>
+            An ortholinear keyboard is a keyboard that aligns in a columnar
+            manner. This means that the keys are in perfect rows, up and down
+            and left to right. This layout minimizes finger movement from key to
+            key and is ideal for professional typists who endure long hours of
+            practice.
+          </td>
+        </tr>
+        <tr>
+          <th>PROS</th>
+          <th>CONS</th>
+        </tr>
+        <tr>
+          <!-- Pros -->
+          <td>
+            <ul>
+              <li>
+                The are smaller, meaning they are more portable and take less
+                desktop space.
+              </li>
+              <li>
+                It minimizes finger movement from key to key and is ideal for
+                professional typists who endure long hours of practice.
+              </li>
+              <li>
+                It is more ergonomic, because it allows you to keep your hands
+                in a more natural position.
+              </li>
+              <li>
+                Usually they are programmable, meaning you can customize the
+                layout to your needs or what you like.
+              </li>
+              <li>
+                They are ←doit yourself→ friendly, meaning you can build your
+                own keyboard, meaning you can have "unlimited" customization.
+              </li>
+              <li>
+                It is easyer to repair, because most of the pieces are hot
+                swapable and you can buy them separately.
+              </li>
+            </ul>
+          </td>
+          <!-- Cons -->
+          <td>
+            <ul>
+              <li>There is a learnig curve to get use to type on.</li>
+              <li>Probably you will need to learn tap dancing.</li>
+              <li>
+                The market is less saturated, making it sometimes difficult to
+                find what you want.
+              </li>
+              <li>
+                Becaus is ←doit yourself→ usually you will need to learn about
+                keyboard pieces and in the worst case electronics and soldering.
+                (Ther almost no prebuilt ortholinear keyboards on the market)
+              </li>
+              <li>Most of the time Ortholinear are more expensive.</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

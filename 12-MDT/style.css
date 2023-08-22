@@ -1,0 +1,124 @@
+body {
+  background-image: url(Images/Bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 2px;
+}
+
+h1 {
+  font-size: 60px;
+  text-align: center;
+}
+
+h2.KyeboardLayout {
+  font-size: 50px;
+  text-align: center;
+}
+
+ol {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  text-align: left;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  border: 10px solid #d5d5d5;
+  border-collapse: collapse;
+}
+
+tr, td, th {
+  padding: 8px;
+  text-align: center;
+  background: #00000050;
+}
+
+td{
+  width: 400px;
+}
+
+table.Comparation tr,table.Comparation th,table.Comparation td {
+  border: 8px solid #d5d5d5;
+}
+
+p {
+  text-align: justify;
+  font-size: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+details {
+  text-align: justify;
+  font-size: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+button {
+  background-color: #ffffffa6;
+  color: rgb(0, 0, 0);
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 30px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #767676e4;
+  color: white;
+}
+
+button:active {
+  background-color: #a3a3a3e4;
+  color: rgba(255, 255, 255, 0.844);
+  transform: translateY(4px);
+}
+
+div.KyeboardLayout{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  margin-top: 50px;
+}
+
+table#genInfo, table.Comparation{
+  margin-top: 20px;
+}
+
+button.collapsible{
+  background: none;
+  border: none;
+  color: white;
+  text-align: Left;
+  font-size: 10px;
+}
+
+.zoom {
+  transition: transform ease-in-out 0.3s;
+}
+
+.zoom:hover {
+  transform: scale(1.25);
+}
