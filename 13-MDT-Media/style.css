@@ -91,11 +91,18 @@ div#video {
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 #buttons img {
   width: 300px;
+}
+
+#buttons h3 {
+  background: none;
+  color: black;
+  display: inline;
+  justify-content: space-around;
 }
 
 #audioNormal {
