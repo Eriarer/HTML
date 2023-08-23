@@ -12,10 +12,52 @@ body {
   align-items: center;
 }
 
+h1 {
+  font-size: 80px;
+}
+
+button {
+  background: #0b0035;
+  border: 5px solid #2b2641;
+  border-radius: 20px;
+  margin: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+button:hover {
+  cursor: pointer;
+  background: #1b0f49;
+  border: 5px solid #3d394f;
+}
+
+button:active {
+  cursor: crosshair;
+  background: #493c7d;
+  border: 5px solid #565168;
+}
+
+a {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+button:active a {
+  color: #66598f;
+  font-size: 50px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
 table#table1 {
   width: 80%;
   background: #0a062244;
   text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 #table1 th,
@@ -82,4 +124,17 @@ table#table1 {
 
 #table1 audio {
   width: 80%;
+}
+
+#table1 tr td p#descripcion {
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+#table1 tr td p#descripcion span {
+  margin-left: 38%;
+}
+
+#table1 tr td p#descripcion span#spanOne {
+  margin-left: 34%;
 }
