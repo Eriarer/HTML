@@ -1,0 +1,85 @@
+body {
+  background-color: #01001a;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+table#table1 {
+  width: 80%;
+  background: #0a062244;
+  text-align: center;
+}
+
+#table1 th,
+#table1 tr,
+#table1 td {
+  width: 80%;
+  background: #1d1a2e;
+  color: #fff;
+}
+
+#table1 thead th {
+  border-radius: 40px 40px 0px 0px;
+  font-size: 40px;
+  font-weight: bolder;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#table1 td {
+  width: 50%;
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+#table1 tbody td {
+  border-bottom: 3px solid #fff;
+}
+
+#table1 tbody tr td.middleBorder,
+#table1 tfoot tr td.middleBorder {
+  border-right: 5px solid #fff;
+}
+
+#table1 tfoot tr td#left {
+  border-radius: 0px 0px 0px 40px;
+}
+
+#table1 tfoot tr td#right {
+  border-radius: 0px 0px 40px 0px;
+}
+
+#table1 ol {
+  list-style: circle;
+  margin-left: 40%;
+  text-align: left;
+  justify-items: center;
+  align-items: left;
+}
+
+#table1 video {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#table1 video:hover {
+  box-shadow: 0px 0px 20px 10px #130a3382;
+}
+
+#table1 audio {
+  width: 80%;
+}
