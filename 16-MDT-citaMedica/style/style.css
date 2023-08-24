@@ -1,0 +1,28 @@
+div {
+  width: 400px;
+}
+
+body {
+  margin: 40px;
+  background-image: url(../Media/images/images.jpeg);
+  color: aliceblue;
+  text-shadow: 6px 6px 6px black;
+}
+
+fieldset {
+  background-color: #00191d8f;
+}
+
+@font-face {
+  font-family: "Dancing Script";
+  src: url(../Media/fonts/dancing.woff2);
+}
+
+legend {
+  font-family: "Dancing Script";
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  color: black;
+  text-shadow: 2px 2px 2px white;
+}
