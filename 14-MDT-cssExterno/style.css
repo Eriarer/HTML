@@ -13,7 +13,7 @@ body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 40px;
 }
 
 button {
@@ -41,15 +41,12 @@ button:active {
 
 a {
   color: #fff;
-  font-size: 50px;
+  font-size: 30px;
   font-weight: bolder;
   text-decoration: none;
 }
 button:active a {
   color: #66598f;
-  font-size: 50px;
-  font-weight: bolder;
-  text-decoration: none;
 }
 
 table#table1 {
@@ -70,7 +67,7 @@ table#table1 {
 
 #table1 thead th {
   border-radius: 40px 40px 0px 0px;
-  font-size: 40px;
+  font-size: 20px;
   font-weight: bolder;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -78,7 +75,6 @@ table#table1 {
 
 #table1 td {
   width: 50%;
-  font-size: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
   justify-content: center;

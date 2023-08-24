@@ -1,4 +1,4 @@
 function volume() {
   let porterRobinson = document.getElementById("goodByeToAworld");
-  porterRobinson.volume = 0.1;
+  porterRobinson.volume = 0.5;
 }
