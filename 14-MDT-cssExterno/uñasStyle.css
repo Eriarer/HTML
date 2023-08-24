@@ -1,0 +1,59 @@
+body {
+  background-image: url(Media/WaterColorBG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#table1 {
+  width: 30%;
+}
+#table1 caption {
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+  justify-content: center;
+}
+
+#table1 th {
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: left;
+  justify-content: left;
+}
+
+#table1 tr {
+  width: 200px;
+}
+
+#table1 td {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  justify-content: left;
+  width: 90%;
+  height: 20px;
+  flex-grow: 1;
+  border-bottom: 1px solid black;
+}
+
+#table1 td.price {
+  font-weight: normal;
+  border-bottom: none;
+}
+
+img {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  width: 400px;
+}
