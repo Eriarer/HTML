@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Formulario</title>
+    <!-- Linkis -->
+    <link
+      rel="stylesheet"
+      href="style.css"
+    />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div>
+      <fieldset id="myform">
+        <legend>Formualario</legend>
+        <table>
+          <tr>
+            <!-- nombre -->
+            <td>
+              <label for="name">Nombre/s:</label>
+              <input
+                type="text"
+                id="Nombre"
+                name="Nombre"
+              />
+            </td>
+            <!-- apellidos -->
+            <td>
+              <label for="last_name">Apellido/s:</label>
+              <input
+                type="text"
+                id="last_name"
+                name="last_name"
+              />
+            </td>
+            <!-- Edad -->
+            <td>
+              <label for="edad">Edad:</label>
+              <input
+                type="number"
+                id="edad"
+                name="edad"
+              />
+            </td>
+          </tr>
+          <tr>
+            <!-- Nacimieto -->
+            <td>
+              <label for="nacimiento">Fecha de nacimiento:</label>
+              <input
+                type="date"
+                id="nacimiento"
+                name="nacimiento"
+              />
+            </td>
+            <!-- Email -->
+            <td>
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+              />
+            </td>
+            <!-- Genero -->
+            <td>
+              Género:<br />
+              <input
+                type="radio"
+                id="mujer"
+                name="genero"
+                value="mujer"
+              />
+              <label for="mujer">Mujer</label>
+              <br />
+              <input
+                type="radio"
+                id="hombre"
+                name="genero"
+                value="hombre"
+              />
+              <label for="hombre">Hombre</label>
+              <br />
+              <input
+                type="radio"
+                id="otro"
+                name="genero"
+                value="otro"
+              />
+              <label for="otro">Otro</label>
+            </td>
+          </tr>
+          <tr>
+            <!-- seleccion de colores -->
+            <td>
+              <label for="color">Color favorito:</label>
+              <select
+                name="color"
+                id="color"
+              >
+                <option value="rojo">rojo</option>
+                <option value="azul">azul</option>
+                <option value="verde">verde</option>
+                <option value="amarillo">amarillo</option>
+                <option value="rosa">rosa</option>
+                <option value="violeta">violeta</option>
+                <option value="marron">marron</option>
+                <option value="turquesa">turquesa</option>
+                <option value="celeste">celeste</option>
+                <option value="morado">morado</option>
+                <option value="naranja">naranja</option>
+                <option value="blanco">blanco</option>
+                <option value="gris">gris</option>
+                <option value="negro">negro</option>
+              </select>
+            </td>
+            <!-- Animal -->
+            <td>
+              Animal favorito:<br />
+              <input
+                type="checkbox"
+                id="perro"
+                name="animal"
+                value="perro"
+              />
+              <label for="perro">Perro</label>
+              <br />
+              <input
+                type="checkbox"
+                id="gato"
+                name="animal"
+                value="gato"
+              />
+              <label for="gato">Gato</label>
+              <br />
+              <input
+                type="checkbox"
+                id="pez"
+                name="animal"
+                value="pez"
+              />
+              <label for="pez">Pez</label>
+              <br />
+              <input
+                type="checkbox"
+                id="otroAnimal"
+                name="animal"
+                value="otro"
+              />
+              <label for="otro">Otro</label>
+              <br />
+              <input
+                type="checkbox"
+                id="ninguno"
+                name="animal"
+                value="ninguno"
+              />
+              <label for="ninguno">Ninguno</label>
+            </td>
+            <!-- data list lugar favorito de vivir -->
+            <td>
+              <label for="lugar">Lugar favorito de vivir:</label>
+              <input
+                list="lugares"
+                name="lugar"
+                id="lugar"
+              />
+              <datalist id="lugares">
+                <option value="Madrid">Madrid</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Valencia">Valencia</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Zaragoza">Zaragoza</option>
+                <option value="Malaga">Malaga</option>
+                <option value="Murcia">Murcia</option>
+                <option value="Palma de Mallorca">Palma de Mallorca</option>
+                <option value="Las Palmas de Gran Canaria">
+                  Las Palmas de Gran Canaria
+                </option>
+                <option value="Bilbao">Bilbao</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Cordoba">Cordoba</option>
+                <option value="Valladolid">Valladolid</option>
+                <option value="Vigo">Vigo</option>
+                <option value="Gijon">Gijon</option>
+                <option value="L'Hospitalet de Llobregat">
+                  L'Hospitalet de Llobregat
+                </option>
+                <option value="A Coruña">A Coruña</option>
+                <option value="Vitoria-Gasteiz">Vitoria-Gasteiz</option>
+                <option value="Granada">Granada</option>
+                <option value="Elche">Elche</option>
+                <option value="Oviedo">Oviedo</option>
+                <option value="Badalona">Badalona</option>
+                <option value="Cartagena">Cartagena</option>
+                <option value="Terrassa">Terrassa</option>
+                <option value="Jerez de la Frontera">
+                  Jerez de la Frontera
+                </option>
+                <option value="Sabadell">Sabadell</option>
+                <option value="Móstoles">Móstoles</option>
+                <option value="Santa Cruz de Tenerife">
+                  Santa Cruz de Tenerife
+                </option>
+                <option value="Pamplona">Pamplona</option>
+                <option value="Almería">Almería</option>
+                <option value="Alcalá de Henares">Alcalá de Henares</option>
+                <option value="Fuenlabrada">Fuenlabrada</option>
+                <option value="San Sebastián">San Sebastián</option>
+                <option value="Leganés">Leganés</option>
+                <option value="Santander">Santander</option>
+                <option value="Burgos">Burgos</option>
+                <option value="Castellón de la Plana">
+                  Castellón de la Plana
+                </option>
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <!-- Imagen que te guste -->
+            <td>
+              <label for="imagen">Imagen que te guste:</label>
+              <input
+                type="file"
+                id="imagen"
+                name="imagen"
+              />
+            </td>
+            <!-- Guardar cambios -->
+            <td>
+              <input
+                type="submit"
+                value="Guardar cambios"
+                id="Guardar"
+                onclick="guardar()"
+              />
+            </td>
+            <!-- reset -->
+            <td>
+              <input
+                type="reset"
+                value="Borrar"
+              />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </div>
+  </body>
+</html>

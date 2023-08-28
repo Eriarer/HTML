@@ -1,0 +1,26 @@
+body {
+  background-image: url(Media/cool-background1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: medium;
+  /* alinear al centro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: 14%;
+}
+
+fieldset {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  border: 3px solid rgba(100, 100, 100, 0.5);
+}
+
+table tr td {
+  padding: 10px;
+  /* Alinear items verticalmente arriba */
+  vertical-align: top;
+  /* Alinear items al centro */
+}
