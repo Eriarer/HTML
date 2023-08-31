@@ -1,0 +1,32 @@
+div > p {
+  /* Alinear items en la misma linea */
+  display: inline-block;
+  margin-right: 20px;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+div > h2 {
+  margin-bottom: -50px;
+}
+
+#google .lobster {
+  font-family: "Lobster", cursive;
+}
+
+#google .caveat {
+  font-family: "Caveat", cursive;
+}
+
+#google .shadows {
+  font-family: "Shadows Into Light", cursive;
+}
+
+#google .orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+#google .francois {
+  font-family: "Francois One", sans-serif;
+}
