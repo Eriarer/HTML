@@ -1,0 +1,97 @@
+body {
+  /* alinear al centro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+hr {
+  border: 2px solid #000;
+  width: 110%;
+  margin: 0px;
+}
+
+p {
+  /* Alinear items en la misma linea */
+  display: inline-block;
+  margin-right: 20px;
+  padding: 0;
+}
+
+p > span {
+  display: flex;
+  flex-direction: column;
+}
+
+#google p {
+  margin: 2px 2px 10px 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+#google .lobster {
+  font-family: "Lobster", cursive;
+}
+
+#google .caveat {
+  font-family: "Caveat", cursive;
+}
+
+#google .shadows {
+  font-family: "Shadows Into Light", cursive;
+}
+
+#google .orbitron {
+  font-family: "Orbitron", sans-serif;
+}
+
+#google .francois {
+  font-family: "Francois One", sans-serif;
+}
+
+#fontAwesome p {
+  margin: 2px 2px 10px 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#fontAwesome p#search {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-weight: bolder;
+}
+
+#fontAwesome p#search i {
+  font-size: 50px;
+}
+
+#animate p {
+  margin: 2px 2px 30px 30px;
+  font-size: 40px;
+  font-weight: 800;
+}
+
+#bounce {
+  animation: bounce 2s infinite;
+}
+
+#flash {
+  animation: flash 3s infinite;
+}
+
+#pulse {
+  animation: pulse 1.5s infinite;
+}
+
+#rubberBand {
+  animation: rubberBand 2s infinite;
+}
+
+#shakeX {
+  animation: shakeX 1.8s infinite;
+}
