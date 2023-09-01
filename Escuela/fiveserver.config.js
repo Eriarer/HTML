@@ -3,5 +3,5 @@ module.exports = {
   injectBody: true,
   injectCss: false,
   navigate: true,
-  remoteLogs: true
-}
+  remoteLogs: true,
+};
