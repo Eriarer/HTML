@@ -1,0 +1,74 @@
+h1,
+h2 {
+  color: #fff;
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: #000;
+}
+
+h2 {
+  background: #333;
+}
+
+div#text p {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.color {
+  color: rebeccapurple;
+}
+
+.shadow {
+  text-shadow: 5px 5px 3px #4f9800;
+}
+
+.alingment {
+  text-align: center;
+}
+
+.spacing1 {
+  letter-spacing: 30px;
+}
+.spacing2 {
+  word-spacing: 50px;
+}
+
+#css h3 {
+  text-align: center;
+}
+
+.fontserif {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.fontsafe {
+  font-family: Tahoma, Verdana, sans-serif;
+}
+
+.fontfallback {
+  font-family: Copperplate, Papyrus, fantasy;
+}
+
+.fontstyel {
+  font-style: italic;
+}
+
+.fontsize {
+  font-size: 1.5em;
+}
+
+.google {
+  font-family: "Sofia", sans-serif;
+}
+
+.fotnweight {
+  font-weight: 900;
+}
