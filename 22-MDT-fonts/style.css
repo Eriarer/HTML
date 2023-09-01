@@ -77,21 +77,26 @@ p > span {
 }
 
 #bounce {
-  animation: bounce 2s infinite;
+  animation: bounce infinite;
+  animation-duration: 2s;
 }
 
 #flash {
-  animation: flash 3s infinite;
+  animation: flash infinite;
+  animation-duration: 2s;
 }
 
 #pulse {
-  animation: pulse 1.5s infinite;
+  animation: pulse infinite;
+  animation-duration: 2s;
 }
 
 #rubberBand {
-  animation: rubberBand 2s infinite;
+  animation: rubberBand infinite;
+  animation-duration: 2s;
 }
 
 #shakeX {
-  animation: shakeX 1.8s infinite;
+  animation: shakeX infinite;
+  animation-duration: 1.8s;
 }
