@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>MenuConFlexbox</title>
+    <!-- cache -->
+    <meta
+      http-equiv="Cache-Control"
+      content="no-cache, mustrevalidate"
+    />
+    <style>
+      body {
+        margin: 0px;
+        padding: 0px;
+        font-family: Verdana, serif;
+      }
+
+      header,
+      p {
+        padding: 10px;
+        background: #3a243a;
+        color: #fff;
+        font-size: 3em;
+        font-weight: bold;
+        text-align: center;
+      }
+      p {
+        font-size: 1em;
+        margin: 0;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        background: #e6a7ff;
+        outline: 3px double #5d4900;
+      }
+      nav a {
+        color: #3b2e00;
+        text-decoration: none;
+        padding: 15px;
+        font-weight: 600;
+        width: fill-available;
+        text-align: center;
+        transition: 1s;
+        border-radius: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      nav a:hover {
+        background: linear-gradient(
+          90deg,
+          #e6a7ff 0%,
+          #c77dff 10%,
+          #a74dff 30%,
+          #9328ff 50%,
+          #a74dff 70%,
+          #c77dff 90%,
+          #e6a7ff 100%
+        );
+        color: #10001696;
+        transition: 1s;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>Menu horizontal</header>
+    <p>Melgoza de la Torre Abraham</p>
+    <nav>
+      <a href="#">Menú</a>
+      <a href="#">Artículos</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Inicio de sesión</a>
+    </nav>
+  </body>
+</html>
