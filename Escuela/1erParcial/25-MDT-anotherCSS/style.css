@@ -1,0 +1,63 @@
+main {
+  background-color: rgba(137, 43, 226, 0.402);
+  margin-left: -10px;
+  margin-right: -10px;
+}
+.subtitulos {
+  /* Expandirse 10px extra */
+  margin: -10px;
+  background: #000;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* de h1 a h6 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+}
+
+#miNombre {
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.5);
+}
+
+#border {
+  border: 6px solid rgb(134, 0, 0);
+  border-radius: 0px 0px 40px 40px;
+  padding: 10px;
+  margin: 10px;
+  margin-top: -30px;
+  border-top: none;
+  border-bottom-style: double;
+  border-left-style: double;
+  border-right-style: double;
+}
+
+#border .subtitulos {
+  color: violet;
+}
+
+/* Color del primer hijo tipo p de border  */
+#Bcontent p:first-child {
+  border-left: 10px solid red;
+  border-radius: 10px;
+  color: red;
+  padding: 30px;
+}
+
+/* Color del ultimo hijo p de border */
+#Bcontent p:last-child {
+  border-right: 20px solid blue;
+  border-radius: 12em;
+  margin-left: 25em;
+  padding-right: 5em;
+  width: 500px;
+  color: blue;
+}
