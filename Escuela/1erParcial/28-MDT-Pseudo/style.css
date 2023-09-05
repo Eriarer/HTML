@@ -1,0 +1,62 @@
+#pseudo1 p::first-letter {
+  font-size: 2em;
+  color: red;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#pseudo2 p::after {
+  content: " - Fin del texto";
+  font-size: 1.5em;
+  color: blue;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#pseudo3 p::before {
+  content: "Inicio del texto - ";
+  font-size: 1.5em;
+  color: blue;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#pseudo4 p::first-line {
+  font-size: 1.5em;
+  color: rgb(247, 0, 255);
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#pseudo5 p::selection {
+  background-color: rgb(255, 255, 0);
+  color: rgb(0, 107, 117);
+}
+
+#pseudo6 ::marker {
+  color: aqua;
+}
+
+#pseudo7 ::first-letter {
+  color: red;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#pseudo7 p::after {
+  content: "  >:)";
+  color: blue;
+}
+
+#pseudo8 p::before {
+  content: ">:)  ";
+  color: blue;
+}
+
+#pseudo8 ::first-line {
+  color: rgb(247, 0, 255);
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: Arial;
+}
