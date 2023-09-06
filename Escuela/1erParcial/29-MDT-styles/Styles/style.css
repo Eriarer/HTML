@@ -3,6 +3,7 @@ body {
     url(../images/BG.gif);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: fixed;
 
   height: 100vh;
   padding: 0;
