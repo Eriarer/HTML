@@ -1,0 +1,37 @@
+#VI {
+  margin-bottom: 300px;
+}
+
+#VI .animatedBtn button{
+  padding: 15px 32px;
+  margin: 4px 2px;
+
+  background: #f06dff;
+  box-shadow: 0 9px 0 2px  #003290;
+  color: white;
+  border-radius: 12px;
+  border: none;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 0px 30px rgb(255, 255, 255);
+
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+#VI .animatedBtn button:hover {
+  background: #c855d5;
+  box-shadow: 0 11px 0 2px  #00276e;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+  transform: translateY(-2px);
+}
+
+#VI .animatedBtn button:active {
+  background: #9b3da5;
+  box-shadow: 0 5px 0 2px  #003290;
+  text-shadow: 0px 0px 20px rgba(255, 255, 255, 0.786);
+  transform: translateY(4px);
+}
+
