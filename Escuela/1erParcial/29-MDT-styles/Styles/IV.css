@@ -1,0 +1,67 @@
+#IV img{
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+#IV #zoom{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+#IV .img-zoom-container{
+  position: relative;
+  margin-right: 10px;
+}
+
+#IV .img-zoom-lens{
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+#IV .img-zoom-result {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+}
+
+#IV #imgCompare {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+#IV .img-comp-container {
+  position: relative;
+  height: 200px; /*should be the same height as the images*/
+}
+
+#IV .img-comp-img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  overflow:hidden;
+}
+
+#IV .img-comp-img img {
+  display:block;
+}
+
+#IV .img-comp-slider {
+  position: absolute;
+  z-index:9;
+  cursor: ew-resize;
+  /*set the appearance of the slider:*/
+  width: 40px;
+  height: 40px;
+  background-color: #2196F3;
+  opacity: 0.7;
+  border-radius: 50%;
+}
