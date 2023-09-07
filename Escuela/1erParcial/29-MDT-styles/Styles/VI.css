@@ -35,3 +35,99 @@
   transform: translateY(4px);
 }
 
+#VI .split{
+  margin: 0px;
+}
+
+#VI .split .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #c855d5;
+  min-width: 160px;
+  z-index: 1;
+  margin-left: 2px;
+}
+
+#VI .split .dropdown-content a {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 0px 30px rgb(255, 255, 255);
+  
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+
+  border: #00276e 2px solid;
+}
+
+#VI .split button{
+  background: #f06dff;
+  box-shadow: 0 9px 0 #003290;
+  color: white;
+  border-radius: 12px;
+  border: none;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0px 0px 30px rgb(255, 255, 255);
+
+  cursor: pointer;
+  transition-duration: 0.4s;
+
+  height: 50px;
+  min-width: 50px;
+}
+
+#VI .split .left{
+  border-radius: 12px 0px 0px 12px;
+  border-right: 2px solid #0c4fc9;
+}
+
+#VI .split .right{
+  border-radius: 0px 12px 12px 0px;
+  border-left: 2px solid #0c4fc9;
+}
+
+#VI .split #buttons:hover button{
+  background: #c855d5;
+  box-shadow: 0 11px 0 #00276e;
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.817);
+  box-shadow: 0 11px 0 #003290;
+  transform: translateY(-2px);
+}
+
+#VI .split #buttons .right:hover {
+  background: #ac38b9;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+#VI .split #buttons .left:hover {
+  background: #ac38b9;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+#VI .split #buttons .dropdown:hover .dropdown-content{
+  display: block;
+}
+
+#VI .split #buttons .dropdown-content a:hover{
+  background: #ac38b9;
+  text-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+#VI .split #buttons .left:active{
+  background: #c855d5;
+  box-shadow: 0 11px 0 #00276e;
+  text-shadow: 0px 0px 1px rgb(255, 255, 255);
+  box-shadow: 0 4px 0 #003290;
+  transform: translateY(5px);
+}
+
+#VI .split #buttons .dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
