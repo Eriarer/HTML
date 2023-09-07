@@ -1,0 +1,35 @@
+#VIII {
+  margin-bottom: 100px;
+}
+
+#VIII .container {
+  position: relative;
+  width: 80%;
+  height: 30em;
+}
+
+#VIII .container #title {
+  position: absolute;
+  top: 7%;
+  left: 60.2%;
+  z-index: 2;
+  font-size: 2em;
+  text-align: center;
+}
+#VIII .container img {
+  position: absolute;
+  left: 6em;
+  width: 100%;
+  height: auto;
+}
+
+#VIII .container #sun {
+  position: absolute;
+  top: 10px;
+  left: 69.8%;
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  transform: rotate(0deg);
+  animation: rotateSun 10s linear infinite;
+}
