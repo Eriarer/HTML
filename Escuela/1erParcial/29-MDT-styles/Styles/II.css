@@ -1,17 +1,16 @@
-#II {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 #II img {
   display: block;
-  width: 400px;
-  height: 600px;
 }
 
 #II .container {
   position: relative;
+  width: 18em;
+  height: 30em;
+}
+
+#II .container img {
+  width: 100%;
+  height: 100%;
 }
 
 #II .text {
