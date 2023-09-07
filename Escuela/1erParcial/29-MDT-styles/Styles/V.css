@@ -1,0 +1,22 @@
+#V img{
+  width: 350px;
+  height: 200px;
+  border-radius: 0.8em;
+}
+
+#V .gray img {
+  filter: grayscale(100%);
+  transition: 1s
+}
+
+#V .gray:hover img {
+  filter: grayscale(0%);
+}
+
+#V .zoom img {
+  transition: 1s
+}
+
+#V .zoom:hover img{
+  transform: scale(1.2);
+}

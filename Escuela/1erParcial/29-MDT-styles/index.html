@@ -37,9 +37,14 @@
       rel="stylesheet"
       href="Styles/IV.css"
     />
+    <link
+      rel="stylesheet"
+      href="Styles/V.css"
+    />
   </head>
   <body>
     <header>Melgoza de la Torre Abraham</header>
+    <!-- I -->
     <!-- EFECTOS OVERLAY -->
     <div id="II">
       <!-- HOVER IN -->
@@ -79,6 +84,8 @@
         </div>
       </div>
     </div>
+    <!-- III -->
+    <!-- Manejo de imagenes -->
     <div id="III">
       <!-- Thumnail -->
       <div id="thumbnail">
@@ -112,6 +119,8 @@
         />
       </div>
     </div>
+    <!-- IV -->
+    <!-- Animaciones de imagenes -->
     <div id="IV">
       <!-- Zoom -->
       <div id="zooming">
@@ -144,12 +153,22 @@
         </div>
       </div>
     </div>
-
-    <script>
-      imageZoom("toZoom", "zoomed");
-    </script>
-    <script>
-      initComparisons();
-    </script>
+    <!-- V -->
+    <!-- Efectos de imagenes -->
+    <div id="V">
+      <div class="gray">
+        <h3>Color gris</h3>
+        <img src="images/synthwave/sitnth_ligthMode.png" />
+      </div>
+      <div class="zoom">
+        <h3>Zoom Effect</h3>
+        <img src="images/synthwave/Sinth_Retro2.jpg" />
+      </div>
+    </div>
   </body>
+  <!-- Script post HTML -->
+  <script>
+    imageZoom("toZoom", "zoomed");
+    initComparisons();
+  </script>
 </html>
