@@ -13,6 +13,8 @@
       href="images/Icon.ico"
       type="image/x-icon"
     />
+    <!-- script -->
+    <script src="Script/script.js"></script>
     <!-- cache -->
     <meta
       http-equiv="Cache-Control"
@@ -30,6 +32,10 @@
     <link
       rel="stylesheet"
       href="Styles/III.css"
+    />
+    <link
+      rel="stylesheet"
+      href="Styles/IV.css"
     />
   </head>
   <body>
@@ -106,6 +112,43 @@
         />
       </div>
     </div>
+    <div id="IV">
+      <!-- Zoom -->
+      <div id="zooming">
+        <h3>Zoom</h3>
+        <div id="zoom">
+          <div class="img-zoom-container">
+            <img
+              src="images/synthwave/Car_Synth.jpg"
+              alt="car_synth"
+              id="toZoom"
+            />
+          </div>
+          <div
+            class="img-zoom-result"
+            id="zoomed"
+          ></div>
+        </div>
+      </div>
+
+      <!-- Compare -->
+      <div id="imgCompare">
+        <h3>Compare</h3>
+        <div class="img-comp-container">
+          <div class="img-comp-img">
+            <img src="images/synthwave/Blue_Synth.jpeg" />
+          </div>
+          <div class="img-comp-img img-comp-overlay">
+            <img src="images/synthwave/Red_Synth.png" />
+          </div>
+        </div>
+      </div>
     </div>
+    <script>
+      imageZoom("toZoom", "zoomed");
+    </script>
+    <script>
+      initComparisons();
+    </script>
   </body>
 </html>
