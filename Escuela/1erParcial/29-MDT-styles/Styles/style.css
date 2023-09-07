@@ -7,8 +7,7 @@ body {
   background-position: center;
   /* hacer que la imagen se quede estatica al hacer scroll */
   background-attachment: fixed;
-  
-  
+
   height: 100vh;
   padding: 0;
   margin: 0;
@@ -22,13 +21,19 @@ header {
   font-size: 3em;
   background: rgba(0, 0, 0, 0.515);
   border-radius: 0px 0px 0.8em 0.8em;
+  padding-bottom: 0.2em;
 }
 
 h2 {
   font-size: 2em;
 }
 
-#II, #III, #IV, #V, #VI, #VII{
+#II,
+#III,
+#IV,
+#V,
+#VI,
+#VII {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
