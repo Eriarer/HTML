@@ -18,7 +18,15 @@
     <!-- cache -->
     <meta
       http-equiv="Cache-Control"
-      elements="no-cache, mustrevalidate"
+      content="no-cache, no-store, must-revalidate"
+    />
+    <meta
+      http-equiv="Pragma"
+      content="no-cache"
+    />
+    <meta
+      http-equiv="Expires"
+      content="0"
     />
     <!-- CSS -->
     <link
@@ -41,9 +49,14 @@
       rel="stylesheet"
       href="Styles/V.css"
     />
+    <link
+      rel="stylesheet"
+      href="Styles/VI.css"
+    />
   </head>
   <body>
     <header>Melgoza de la Torre Abraham</header>
+
     <!-- I -->
     <!-- EFECTOS OVERLAY -->
     <div id="II">
@@ -84,6 +97,7 @@
         </div>
       </div>
     </div>
+
     <!-- III -->
     <!-- Manejo de imagenes -->
     <div id="III">
@@ -119,6 +133,7 @@
         />
       </div>
     </div>
+
     <!-- IV -->
     <!-- Animaciones de imagenes -->
     <div id="IV">
@@ -153,6 +168,7 @@
         </div>
       </div>
     </div>
+
     <!-- V -->
     <!-- Efectos de imagenes -->
     <div id="V">
@@ -165,7 +181,19 @@
         <img src="images/synthwave/Sinth_Retro2.jpg" />
       </div>
     </div>
+
+    <!-- VI -->
+    <!-- Botones -->
+    <div id="VI">
+      <!-- animacion -->
+      <div class="animatedBtn">
+        <h3>Animated Button</h3>
+        <button class="animatedBtn">Click Me</button>
+      </div>
+    </div>
+    <hr />
   </body>
+
   <!-- Script post HTML -->
   <script>
     imageZoom("toZoom", "zoomed");
