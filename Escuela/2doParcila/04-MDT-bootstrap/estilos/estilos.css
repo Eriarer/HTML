@@ -4,19 +4,11 @@
   margin: auto;
 }
 
-#formulario {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#tarjetas {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-#carrucel {
+#formulario,
+#tarjetas,
+#carrucel,
+#mediaOjbect,
+#spinner {
   width: 80%;
   margin: 0 auto;
   padding: 20px;
