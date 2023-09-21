@@ -1,20 +1,23 @@
-.miclase{
-    width: 80%;
-    padding: 10px;
-    margin: auto;
- 
- }
+.miclase {
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+}
 
- #formulario{
-      width: 80%;
-      margin: 0 auto;
-      padding: 20px;
- }
+#formulario {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
 
- #tarjetas{
-      width: 80%;
-      margin: 0 auto;
-      padding: 20px;
- }
-  
-    
+#tarjetas {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#carrucel {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
