@@ -1,0 +1,33 @@
+.contenedor {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 200px);
+
+  /* alinear horizontal */
+  /* justify-items: stretch; */
+  /* justify-items: auto; */
+  /* justify-items: start; */
+  justify-items: center;
+  /* justify-items: end; */
+  /* justify-items: space-around; */
+
+  /* alinear vertical */
+  /* align-items: auto; */
+  /* align-items: stretch; */
+  /* align-items: start; */
+  align-items: center;
+  /* align-items: end; */
+  /* align-items: space-around; */
+
+  justify-content: center;
+}
+
+.contenedor .item {
+  background: #000;
+  color: #fff;
+  /* alinear horizontal */
+  justify-self: stretch;
+  /* alinear vertical */
+  align-self: stretch;
+}
