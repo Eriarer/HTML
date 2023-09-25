@@ -1,0 +1,22 @@
+body {
+    font-size: 15px;
+}
+
+/*Estilos Ultimos proyectos*/
+.ultimos-proyectos {
+    background: #424141;
+    color: #fff;
+}
+
+.ultimos-proyectos a {
+    margin-bottom: 1.5rem;
+}
+
+.ultimos-proyectos img {
+    transition: all .3s ease;
+    min-width: 100%;
+}
+
+.ultimos-proyectos a:hover img {
+    transform: scale(1.20);
+}
