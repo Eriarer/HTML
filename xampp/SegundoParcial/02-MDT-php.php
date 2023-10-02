@@ -18,12 +18,12 @@
      * comentario
      */
     print ('Hola Mundo');
-    echo '<h3> Hola Mundo <h3>';
+    echo '<h3> Hola persona <h3>';
 
-    $carrera = 'ISC';
-    $texto = "<p>Estudiante de la carrera $carrera </p>";
+    $carrera = 'Inge en Sistemas';
+    $texto = "<p>Estudiante es un $carrera </p>";
     echo $texto;
-    $texto = '<p>Estudiante de la carrera ' . $carrera . '</p>';
+    $texto = '<p>Estudiante es el ' . $carrera . '</p>';
     echo $texto;
 
     if (isset($_GET['base']) && isset($_GET['altura'])) {
@@ -32,19 +32,19 @@
       echo "Base= $base <br>";
       echo "Altura= $altura <br>";
       $area = calcularArea($base, $altura);
-      echo "<h3 style= 'background:yellow;color:blue;'>El area del triangulo es $area</h3>";
+      echo "<h3 style= 'background:green;color:black;'>El area del rectangulo es $area</h3>";
     } else
-      echo "<h3 style= 'background:green;color:white;'>No procede el calculo del area de un trianguulo</h3>";
+      echo "<h3 style= 'background:red;color:black;'>No hay variables par calcular el rectangulo</h3>";
 
-    $personas = ['Carlos', 'Luis', 'Bety', 'Ana', 'Guillermo'];
-    echo "<h4 $personas[0] $personas[1] $personas[2] $personas[3] $personas[2] </h4>";
+    $personas = ['Miguel', 'Angel', 'Augusto', 'Heriberto'];
+    echo "<h4> $personas[0] $personas[1] $personas[2] $personas[3] $personas[2] </h4>";
 
     function calcularArea($b, $h)
     {
-      return ($b * $h) / 2.0;
+      return $b * $h;
     }
   ?>
-  <h1>Listado de Nombres</h1>
+  <h1>Listado de nombrerijillos</h1>
   <ul>
     <?php
       foreach ($personas as $persona) {
