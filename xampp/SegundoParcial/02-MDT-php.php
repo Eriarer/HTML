@@ -47,7 +47,7 @@ function calcularArea($b, $h)
 ?>
   <h1>Listado de nombrerijillos</h1>
   <ul>
-    <?php
+<?php
 foreach ($personas as $persona) {
     echo "<li>$persona</li>";
 }
