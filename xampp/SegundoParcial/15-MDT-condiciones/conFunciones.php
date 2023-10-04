@@ -23,6 +23,7 @@ function calcularImpuesto($pago)
 
 function main()
 {
+    echo "<h1>Melgoza de la Torre Abraham</h1>";
     if (isset($_GET['hrs']) && isset($_GET['pago'])) {
         $horas = $_GET['hrs'];
         $pago = $_GET['pago'];
