@@ -1,1 +1,126 @@
- 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f2f2f2;
+  color: #000;
+  font-family: Arial, sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  margin: 20px auto;
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    "header      header      header"
+    "contenido   contenido   sidebar"
+    "widget-1    widget-2    sidebar"
+    "footer      footer      footer";
+}
+
+.contenedor > div,
+.contenedor .header,
+.contenedor .contenido,
+.contenedor .sidebar,
+.contenedor .footer {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor .header {
+  grid-area: header;
+  background: #14cb9d8a;
+  font-weight: bolder;
+  color: #fff;
+}
+
+.contenedor .contenido {
+  grid-area: contenido;
+}
+
+.contenedor .sidebar {
+  grid-area: sidebar;
+  background: linear-gradient(
+    to bottom,
+    #a100adc2 10%,
+    #1dd7991f 50%,
+    #a100adc2 90%
+  );
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .widget-1,
+.contenedor .widget-2 {
+  background: #4495ffa6;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .widget-1 {
+  grid-area: widget-1;
+}
+
+.contenedor .widget-2 {
+  grid-area: widget-2;
+}
+
+.contenedor .footer {
+  grid-area: footer;
+  color: #f2f2f2;
+  background: #3c000b;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    background: radial-gradient(
+      circle,
+      rgb(237, 217, 255) 0%,
+      rgb(47, 22, 67) 100%
+    );
+  }
+
+  .contenedor {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "header      header"
+      "contenido   contenido"
+      "sidebar     sidebar"
+      "widget-1    widget-2"
+      "footer      footer";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    background: #503f64c9;
+  }
+
+  .contenedor {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    grid-template-areas:
+      "header"
+      "contenido"
+      "sidebar"
+      "widget-1"
+      "widget-2"
+      "footer";
+  }
+}
