@@ -21,20 +21,25 @@ define('APP_TITLE', 'Tiny File Manager');
 // Auth with login/password
 // set true/false to enable/disable it
 // Is independent from IP white- and blacklisting
-$use_auth = false;
+$use_auth = true;
 
 // Login user name and password
 // Users: array('Username' => 'Password', 'Username2' => 'Password2', ...)
 // Generate secure password hash - https://tinyfilemanager.github.io/docs/pwd.html
 $auth_users = array(
-    'admin' => '$2y$10$/K.hjNr84lLNDt8fTXjoI.DBp6PpeyoJ.mGwrrLuCZfAwfSAGqhOW', //admin@123
-    'user' => '$2y$10$Fg6Dz8oH9fPoZ2jJan5tZuv6Z4Kp7avtQ9bDfrdRntXtPeiMAZyGO' //12345
+    // 'admin' => '$2y$10$/K.hjNr84lLNDt8fTXjoI.DBp6PpeyoJ.mGwrrLuCZfAwfSAGqhOW', //admin@123
+    'user' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
+    'invitado' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
+    'guest' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
+    'eri' => '$2y$10$hYK.lPNu3SlHndkZyajW...0BMMLBCe5.Bcu/lIX0H1J1E3mmd0pG'
 );
 
 // Readonly users
 // e.g. array('users', 'guest', ...)
 $readonly_users = array(
-    'user'
+    'user',
+    'guest',
+    'invitado'
 );
 
 // Global readonly, including when auth is not being used
@@ -88,11 +93,11 @@ $allowed_upload_extensions = '';
 // Favicon path. This can be either a full url to an .PNG image, or a path based on the document root.
 // full path, e.g http://example.com/favicon.png
 // local path, e.g images/icons/favicon.png
-$favicon_path = 'assets/folder-solid.svg';
+$favicon_path = 'assetsTMF/favIcon.svg';
 
 // Files and folders to excluded from listing
 // e.g. array('myfile.html', 'personal-folder', '*.php', ...)
-$exclude_items = array();
+$exclude_items = array('_files', 'assetsTFM', 'TFM.php');
 
 // Online office Docs Viewer
 // Availabe rules are 'google', 'microsoft' or false
@@ -138,16 +143,16 @@ $ip_blacklist = array(
 
 // External CDN resources that can be used in the HTML (replace for GDPR compliance)
 $external = array(
-    'css-bootstrap' => '<link href="assets/css/bootstrap.min.css" rel="stylesheet">',
-    'css-dropzone' => '<link href="assets/css/dropzone.min.css" rel="stylesheet">',
-    'css-font-awesome' => '<link rel="stylesheet" href="assets/css/font-awesome.min.css" crossorigin="anonymous">',
-    'css-highlightjs' => '<link rel="stylesheet" href="assets/css/' . $highlightjs_style . '.min.css">',
-    'js-ace' => '<script src="assets/js/ace.js"></script>',
-    'js-bootstrap' => '<script src="assets/js/bootstrap.bundle.min.js"></script>',
-    'js-dropzone' => '<script src="assets/js/dropzone.min.js"></script>',
-    'js-jquery' => '<script src="assets/js/jquery-3.6.1.min.js"></script>',
-    'js-jquery-datatables' => '<script src="assets/js/dataTables.min.js"></script>',
-    'js-highlightjs' => '<script src="assets/js/highlight.min.js"></script>',
+    'css-bootstrap' => '<link href="assetsTMF/css/bootstrap.min.css" rel="stylesheet">',
+    'css-dropzone' => '<link href="assetsTMF/css/dropzone.min.css" rel="stylesheet">',
+    'css-font-awesome' => '<link rel="stylesheet" href="assetsTMF/css/font-awesome.min.css" crossorigin="anonymous">',
+    'css-highlightjs' => '<link rel="stylesheet" href="assetsTMF/css/' . $highlightjs_style . '.min.css">',
+    'js-ace' => '<script src="assetsTMF/js/ace.js"></script>',
+    'js-bootstrap' => '<script src="assetsTMF/js/bootstrap.bundle.min.js"></script>',
+    'js-dropzone' => '<script src="assetsTMF/js/dropzone.min.js"></script>',
+    'js-jquery' => '<script src="assetsTMF/js/jquery-3.6.1.min.js"></script>',
+    'js-jquery-datatables' => '<script src="assetsTMF/js/dataTables.min.js"></script>',
+    'js-highlightjs' => '<script src="assetsTMF/js/highlight.min.js"></script>',
 );
 
 // if User has the external config file, try to use it to override the default config above [config.php]
