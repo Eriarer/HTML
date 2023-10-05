@@ -1,0 +1,95 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: url("../assets/background.jpeg");
+  background-repeat: repeat;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 100% de la altura de la ventana del navegador */
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "head   head"
+    "form   img"
+    "footer footer";
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  min-width: 100%;
+  flex-grow: 1;
+}
+
+.container > .titulo {
+  grid-area: head;
+  text-align: center;
+  color: #000;
+  background-color: azure;
+  font-weight: bolder;
+  font-size: 50px;
+}
+
+.container > .formulario {
+  grid-area: form;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0px;
+}
+
+.container > .imagen {
+  grid-area: img;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0px;
+}
+
+.container > .imagen .carousel-inner {
+  min-width: 40em;
+  max-width: 40em;
+  height: 100%; /* Establece la altura al 100% para ocupar el espacio en el área de la cuadrícula */
+}
+
+.container > .imagen .carousel-inner > .carousel-item > img {
+  min-height: 30em;
+  max-height: 30em; /* Define la altura máxima deseada */
+  object-fit: cover; /* Escalar y recortar para llenar el contenedor */
+  object-position: bottom;
+}
+
+.container > .imagen .carousel-inner > .carousel-item > img.special {
+  object-position: center;
+}
+
+.wrapper > .pieDePagina {
+  text-align: center;
+  color: #000;
+  background-color: azure;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  height: 4em;
+}
