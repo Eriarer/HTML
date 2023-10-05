@@ -93,7 +93,7 @@ $allowed_upload_extensions = '';
 // Favicon path. This can be either a full url to an .PNG image, or a path based on the document root.
 // full path, e.g http://example.com/favicon.png
 // local path, e.g images/icons/favicon.png
-$favicon_path = 'assetsTMF/favIcon.svg';
+$favicon_path = 'assetsTFM/favIcon.svg';
 
 // Files and folders to excluded from listing
 // e.g. array('myfile.html', 'personal-folder', '*.php', ...)
@@ -143,16 +143,16 @@ $ip_blacklist = array(
 
 // External CDN resources that can be used in the HTML (replace for GDPR compliance)
 $external = array(
-    'css-bootstrap' => '<link href="assetsTMF/css/bootstrap.min.css" rel="stylesheet">',
-    'css-dropzone' => '<link href="assetsTMF/css/dropzone.min.css" rel="stylesheet">',
-    'css-font-awesome' => '<link rel="stylesheet" href="assetsTMF/css/font-awesome.min.css" crossorigin="anonymous">',
-    'css-highlightjs' => '<link rel="stylesheet" href="assetsTMF/css/' . $highlightjs_style . '.min.css">',
-    'js-ace' => '<script src="assetsTMF/js/ace.js"></script>',
-    'js-bootstrap' => '<script src="assetsTMF/js/bootstrap.bundle.min.js"></script>',
-    'js-dropzone' => '<script src="assetsTMF/js/dropzone.min.js"></script>',
-    'js-jquery' => '<script src="assetsTMF/js/jquery-3.6.1.min.js"></script>',
-    'js-jquery-datatables' => '<script src="assetsTMF/js/dataTables.min.js"></script>',
-    'js-highlightjs' => '<script src="assetsTMF/js/highlight.min.js"></script>',
+    'css-bootstrap' => '<link href="assetsTFM/css/bootstrap.min.css" rel="stylesheet">',
+    'css-dropzone' => '<link href="assetsTFM/css/dropzone.min.css" rel="stylesheet">',
+    'css-font-awesome' => '<link rel="stylesheet" href="assetsTFM/css/font-awesome.min.css" crossorigin="anonymous">',
+    'css-highlightjs' => '<link rel="stylesheet" href="assetsTFM/css/' . $highlightjs_style . '.min.css">',
+    'js-ace' => '<script src="assetsTFM/js/ace.js"></script>',
+    'js-bootstrap' => '<script src="assetsTFM/js/bootstrap.bundle.min.js"></script>',
+    'js-dropzone' => '<script src="assetsTFM/js/dropzone.min.js"></script>',
+    'js-jquery' => '<script src="assetsTFM/js/jquery-3.6.1.min.js"></script>',
+    'js-jquery-datatables' => '<script src="assetsTFM/js/dataTables.min.js"></script>',
+    'js-highlightjs' => '<script src="assetsTFM/js/highlight.min.js"></script>',
 );
 
 // if User has the external config file, try to use it to override the default config above [config.php]
