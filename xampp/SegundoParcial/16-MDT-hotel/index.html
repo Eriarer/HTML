@@ -44,50 +44,25 @@
             action="php/form.php"
             method="get"
           >
-            <table>
-              <div class="nombre">
-                <label for="nombre">Nombre:</label>
-                <input
-                  type="text"
-                  name="nombre"
-                  id="nombre"
-                  placeholder="Nombre"
-                  required
-                />
-              </div>
-              <div class="habitacion">
-                <label for="habitacion">Habitacion:</label>
-                <select
-                  name="habitacion"
-                  id="habitacion"
-                  required
+            <div class="input-group flex-nowrap">
+              <div class="input-group-prepend">
+                <span
+                  class="input-group-text"
+                  id="addon-wrapping"
                 >
-                  <option value="1">Habitacion 1</option>
-                  <option value="2">Habitacion 2</option>
-                  <option value="3">Habitacion 3</option>
-                  <option value="4">Habitacion 4</option>
-                  <option value="5">Habitacion 5</option>
-                </select>
+                  Nombre
+                </span>
               </div>
-              <div class="dias">
-                <label for="dias">Dias:</label>
-                <input
-                  type="number"
-                  name="dias"
-                  id="dias"
-                  placeholder="Dias"
-                  required
-                />
-              </div>
-              <div class="boton">
-                <input
-                  type="submit"
-                  value="Enviar"
-                />
-              </div>
-            </table>
+              <input
+                type="text"
+                class="form-control"
+                aria-label="nombre"
+                aria-describedby="addon-wrapping"
+              />
+            </div>
           </form>
         </div>
+        <div class="separador"></div>
         <div class="imagen">
           <div
             id="carouselExampleIndicators"
