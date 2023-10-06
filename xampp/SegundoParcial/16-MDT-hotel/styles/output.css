@@ -48,9 +48,8 @@ button {
 }
 
 .container > .carta {
-  width: 80vw;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  height: 80vh;
+  width: auto;
 }
 
 .card {
