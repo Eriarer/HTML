@@ -29,8 +29,8 @@ function calcularCobro($tarifa, $estancia)
 }
 $nombre = (isset($_GET['nombre']) ? $_GET['nombre'] : 'TestUser')
   . ' ' . (isset($_GET['apellido']) ? $_GET['apellido'] : ' Test');
-$hab = isset($_GET['habitacion']) ? $_GET['habitacion'] : '2';
-$estancia = isset($_GET['dias']) ? $_GET['dias'] : '1';
+$hab = isset($_GET['habitacion']) ? $_GET['habitacion'] : '5';
+$estancia = isset($_GET['dias']) ? $_GET['dias'] : '15';
 switch ($hab) {
   case '1':
     $imgHab = '../assets/habitaciones/hab1.jpg';
@@ -76,24 +76,20 @@ $precioTotal = $precio - $descuento;
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
   <link rel="stylesheet" href="../styles/style.css">
   <link rel="stylesheet" href="../styles/output.css">
+  <script src="../script/script.js"></script>
 </head>
 
 <body>
   <div class="wrapper">
     <div class="container">
       <div class="titulo">HOTEL LAS GLORIAS</div>
-      <div class="recivo">
-        <div class="card" style="width: 18rem;">
-          <img src="
-          <?php echo $imgHab; ?>" class="card-img-top" alt="
-          <?php echo $tipoHab ?>">
+      <div class="carta">
+        <div class="card ">
+          <img src="<?php echo $imgHab; ?>" class="card-img-top" alt="<?php echo $tipoHab ?>">
           <div class="card-body">
-            <h5 class="card-title">
-              <?php echo $tipoHab ?>
-            </h5>
-            <h5>Cotización</h5>
-            <p class="card-text">
-            <table class="table table-borderless">
+            <h1 class="card-title h1"><?php echo $tipoHab ?></h1>
+            <h1 class="h2">Cotización</h1>
+            <table class="table table-striped">
               <tbody>
                 <tr>
                   <td><span class="pseuoTitle">Nombre:</span></td>
@@ -117,14 +113,24 @@ $precioTotal = $precio - $descuento;
                 </tr>
               </tbody>
             </table>
-            </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <a href="#" class="btn btn-info btn-lg  btn-block" onclick=" mostrarModal()">Pagar</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="pieDePagina">Melgoza de la Torre abraham</div>
+    <div class="pieDePagina text-center h6">Melgoza de la Torre abraham</div>
   </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="cerrarModal()">&times;</span>
+      <p>Pagado</p>
+      <button onclick="regresarAlMenu()">OK</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
 </body>
 
