@@ -27,40 +27,51 @@ function calcularCobro($tarifa, $estancia)
 {
   return $tarifa * $estancia;
 }
+
+
 $nombre = (isset($_GET['nombre']) ? $_GET['nombre'] : 'TestUser')
   . ' ' . (isset($_GET['apellido']) ? $_GET['apellido'] : ' Test');
 $hab = isset($_GET['habitacion']) ? $_GET['habitacion'] : '5';
 $estancia = isset($_GET['dias']) ? $_GET['dias'] : '15';
+
+// definir tarifas de tipo constantes 
+define('HAB1', 120.00);
+define('HAB2', 155.00);
+define('HAB3', 210.00);
+define('HAB4', 285.00);
+define('HAB5', 400.00);
+
+
 switch ($hab) {
   case '1':
     $imgHab = '../assets/habitaciones/hab1.jpg';
     $tipoHab = 'Habitación modesta';
-    $tarifa = 120.00;
+    $tarifa = HAB1;
     break;
   case '2':
     $imgHab = '../assets/habitaciones/hab2.jpg';
     $tipoHab = 'Habitación sencilla';
-    $tarifa = 155.00;
+    $tarifa = HAB2;
     break;
   case '3':
     $imgHab = '../assets/habitaciones/hab3.jpg';
     $tipoHab = 'Habitación elegante';
-    $tarifa = 210.00;
+    $tarifa = HAB3;
     break;
   case '4':
     $imgHab = '../assets/habitaciones/hab4.jpg';
     $tipoHab = 'Habitación de lujo';
-    $tarifa = 285.00;
+    $tarifa = HAB4;
     break;
   case '5':
     $imgHab = '../assets/habitaciones/hab5.jpg';
     $tipoHab = 'Habitación super lujosa';
-    $tarifa = 400.00;
+    $tarifa = HAB5;
     break;
   default:
     $imgHab = '../assets/habitaciones/hab1.jpg';
     $tipoHab = 'Habitación modesta';
-    $tarifa = 120.00;
+    $tarifa = HAB1;
     break;
 }
 $precio = calcularCobro($tarifa, $estancia);
