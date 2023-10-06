@@ -22,6 +22,7 @@
       rel="stylesheet"
       href="styles/style.css"
     />
+    <script src="script/validacionDias.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -31,6 +32,7 @@
           <form
             action="php/form.php"
             method="get"
+            id="form"
           >
             <div class="row mb-2">
               <div class="col">
@@ -87,6 +89,7 @@
                   placeholder="Días de estancia"
                   aria-label="días de estancia"
                   name="dias"
+                  id="diasEstancia"
                   required
                 />
               </div>
