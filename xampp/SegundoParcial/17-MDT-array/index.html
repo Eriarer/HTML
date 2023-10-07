@@ -24,44 +24,107 @@
       integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
       crossorigin="anonymous"
     />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/3a39e9961a.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- styles -->
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/navbar.css" />
     <title>ARRAYS</title>
   </head>
   <body>
     <div class="wrapper">
-      <div class="nombre">Nombre</div>
-      <div class="cartas">
-        <div class="carta1">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card
-                title and make up the bulk of the card's
-                content.
-              </p>
-              <a href="#" class="btn btn-primary"
-                >Go somewhere</a
+      <nav class="navbar navbar-expand-xl">
+        <a class="navbar-brand" href="#">
+          <h1 class="h3">
+            Nombre
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"
+                ><i class="fa-solid fa-bars"></i
+              ></span>
+            </button>
+          </h1>
+        </a>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active"></li>
+            <li class="nav-item active">
+              <a class="nav-link h4" href="#">
+                Menu principal
+                <span class="sr-only">(current)</span></a
               >
-            </div>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link h4"
+                href="php/multiplicar.php"
+              >
+                Tabla de Multiplicar
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link h4" href="php/matriz.php">
+                Matriz de Números
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="cartas">
+        <div class="card carta1">
+          <img
+            src="assets/tablaMult.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title h3 font-weight-bold">
+              Tabla de Multiplicar
+            </h5>
+            <p class="card-text">
+              Ingresa la tabla de multiplicar que deseas y
+              el número al que llegara la tabla.
+            </p>
+            <a
+              href="php/multiplicar.php"
+              class="btn font-weight-bold btn-lg"
+              >Ir!</a
+            >
           </div>
         </div>
-        <div class="carta2">
-          <div class="card" style="width: 18rem">
-            <img src="..." class="card-img-top" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card
-                title and make up the bulk of the card's
-                content.
-              </p>
-              <a href="#" class="btn btn-primary"
-                >Go somewhere</a
-              >
-            </div>
+        <div class="card carta2">
+          <img
+            src="assets/matriz.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title h3 font-weight-bold">
+              Matriz de números
+            </h5>
+            <p class="card-text">
+              Ingresa el ancho y alto de la matriz. La
+              llenaremos de numeros aleatorios en un
+              intervalo que tu nos digas!
+            </p>
+            <a
+              href="php/matriz.php"
+              class="btn font-weight-bold btn-lg"
+              >Ir!</a
+            >
           </div>
         </div>
       </div>
