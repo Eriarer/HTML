@@ -10,15 +10,24 @@ function descuento($tarifa, $estancia, $hab)
   estancia >= 15 && habitacion = 1 || habitacion = 2 || habitacion = 3 descuento = 15%;
   */
   $tarifaSinDescuento = $tarifa * $estancia;
-  if ($estancia < 5) {
+  if ($estancia < 5)
+  {
     return 0;
-  } else if ($estancia >= 5 && $estancia < 10) {
+  }
+  else if ($estancia >= 5 && $estancia < 10)
+  {
     return $tarifaSinDescuento * 0.05;
-  } else if ($estancia >= 10 && $estancia < 15) {
+  }
+  else if ($estancia >= 10 && $estancia < 15)
+  {
     return $tarifaSinDescuento * 0.1;
-  } else if ($estancia >= 15 && $hab == 5 || $hab == 4) {
+  }
+  else if ($estancia >= 15 && $hab == 5 || $hab == 4)
+  {
     return $tarifaSinDescuento * 0.2;
-  } else if ($estancia >= 15 && $hab == 1 || $hab == 2 || $hab == 3) {
+  }
+  else if ($estancia >= 15 && $hab == 1 || $hab == 2 || $hab == 3)
+  {
     return $tarifaSinDescuento * 0.15;
   }
 }
@@ -42,7 +51,8 @@ define('HAB4', 285.00);
 define('HAB5', 400.00);
 
 
-switch ($hab) {
+switch ($hab)
+{
   case '1':
     $imgHab = '../assets/habitaciones/hab1.jpg';
     $tipoHab = 'Habitación modesta';
@@ -136,7 +146,6 @@ $precioTotal = $precio - $descuento;
 
   <div id="modal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="cerrarModal()">&times;</span>
       <p>Pagado</p>
       <button onclick="regresarAlMenu()">OK</button>
     </div>

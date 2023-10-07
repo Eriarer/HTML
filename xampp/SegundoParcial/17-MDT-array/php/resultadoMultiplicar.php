@@ -7,7 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- favIcon -->
-  <link rel="icon" type="image/x-icon" href="assets/array-1.webp" />
+  <link rel="icon" type="image/x-icon" href="../assets/array-1.webp" />
   <!-- cache -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <!-- Boostrap v4.6.% -->
@@ -15,9 +15,9 @@
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/3a39e9961a.js" crossorigin="anonymous"></script>
   <!-- styles -->
-  <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/navbar.css" />
   <link rel="stylesheet" href="../styles/form.css" />
+  <link rel="stylesheet" href="../styles/modalMult.css" />
   <!-- script -->
   <script src="../script/modal.js"></script>
   <title>ARRAYS</title>
@@ -55,10 +55,85 @@
         </ul>
       </div>
     </nav>
+    <div class="formulario">
+      <form action="../php/resultadoMultiplicar.php" method="get" id="form">
+        <div class="row mb-2">
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="Tabla de multiplicar: 5" aria-label="Tabla de multiplicar" name="multBase" value="<?php echo isset($_GET['multBase']) ? $_GET['multBase'] : ''; ?>" disabled />
+          </div>
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="Hasta donde llegara la tabla: 10" aria-label="Hasta donde llegara la tabla" name="multLim" value="<?php echo isset($_GET['multLim']) ? $_GET['multLim'] : ''; ?>" disabled />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="submit" class="btn btn-lg btn-block font-weight-bold" disabled>
+              Calcular!
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="contenedor">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col" class="font-weight-bold">Multiplicando</th>
+          <th scope="col" class="font-weight-bold">Multiplicador</th>
+          <th scope="col" class="font-weight-bold">Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php
+        if (isset($_GET['multBase']) && isset($_GET['multLim']))
+        {
+          $multBase = $_GET['multBase'];
+          $multLim = $_GET['multLim'];
+        }
+        else
+        {
+          // numero aleatorio de  a 10
+          $multBase = 5;
+          $multLim = 15;
+        }
+        if ($multLim >= 0)
+        {
+          for ($i = 0; $i <= $multLim; $i++)
+          {
+            $resultado = $multBase * $i;
+            echo "<tr>
+                    <td>$multBase</td>
+                    <td>$i</td>
+                    <td>$resultado</td>
+                  </tr>";
+          }
+        }
+        else
+        {
+          // es negativo el for es al reves 
+          for ($i = 0; $i >= $multLim; $i--)
+          {
+            $resultado = $multBase * $i;
+            echo "<tr>
+                    <td>$multBase</td>
+                    <td>$i</td>
+                    <td>$resultado</td>
+                  </tr>";
+          }
+        }
+        ?>
+      </tbody>
+    </table>
+    <hr>
+    <button class="btn " onclick="regresarAlMenu('../html/multiplicar.html')">Regresar</button>
   </div>
 </body>
 <!-- scripts -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script>
+  mostrarModal();
+</script>
 
 </html>

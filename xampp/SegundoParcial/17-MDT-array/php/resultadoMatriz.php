@@ -7,7 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- favIcon -->
-  <link rel="icon" type="image/x-icon" href="assets/array-1.webp" />
+  <link rel="icon" type="image/x-icon" href="../assets/array-1.webp" />
   <!-- cache -->
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
   <!-- Boostrap v4.6.% -->

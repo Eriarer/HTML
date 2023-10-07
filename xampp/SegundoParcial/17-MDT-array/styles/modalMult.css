@@ -1,0 +1,47 @@
+.contenedor {
+  background-color: #accdde;
+  margin: 1rem auto;
+  border: 1px solid #92a7b2;
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+/* separar de manera uniforme las columnas */
+.contenedor > table {
+  border-collapse: collapse;
+}
+
+.contenedor > table > thead > tr > th,
+.contenedor > table > tbody > tr > td,
+.contenedor > table > tfoot > tr > td {
+  color: #002543;
+  text-align: center;
+  width: 25%;
+}
+
+/* Modifica el ancho de las columnas de la tabla en dispositivos pequeños */
+@media screen and (max-width: 1000px) {
+  .contenedor > table > thead > tr > th,
+  .contenedor > table > tbody > tr > td,
+  .contenedor > table > tfoot > tr > td {
+    width: auto; /* Deja que las columnas se ajusten automáticamente */
+    white-space: nowrap; /* Evita el ajuste de texto en varias líneas */
+  }
+
+  .contenedor > table {
+    width: 100%; /* Ajusta la tabla al 100% del contenedor */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  * {
+    font-size: smaller;
+  }
+}
