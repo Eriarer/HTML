@@ -30,16 +30,19 @@
       crossorigin="anonymous"
     ></script>
     <!-- styles -->
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/navbar.css" />
+    <link rel="stylesheet" href="../styles/form.css" />
+
     <title>ARRAYS</title>
   </head>
+
   <body>
     <div class="wrapper">
       <nav class="navbar navbar-expand-xl">
         <a class="navbar-brand" href="#">
           <h1 class="h3">
-            Nombre
+            Multiplicar
             <button
               class="navbar-toggler"
               type="button"
@@ -50,86 +53,78 @@
               aria-label="Toggle navigation"
             >
               <span class="navbar-toggler-icon"
-                ><i class="fa-solid fa-bars"></i
+                ><span class="navbar-toggler-icon"
+                  ><i class="fa-solid fa-bars"></i></span
               ></span>
             </button>
           </h1>
         </a>
+
         <div
           class="collapse navbar-collapse"
           id="navbarSupportedContent"
         >
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active"></li>
+            <li class="nav-item">
+              <a class="nav-link h4" href="../index.html">
+                Menu principal
+              </a>
+            </li>
             <li class="nav-item active">
               <a class="nav-link h4" href="#">
-                Menu principal
+                Tabla de Multiplicar
                 <span class="sr-only">(current)</span></a
               >
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link h4"
-                href="html/multiplicar.html"
-              >
-                Tabla de Multiplicar
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link h4"
-                href="html/matriz.html"
-              >
+              <a class="nav-link h4" href="matriz.html">
                 Matriz de Números
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="cartas">
-        <div class="card carta1">
-          <img
-            src="assets/tablaMult.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title h3 font-weight-bold">
-              Tabla de Multiplicar
-            </h5>
-            <p class="card-text">
-              Ingresa la tabla de multiplicar que deseas y
-              el número al que llegara la tabla.
-            </p>
-            <a
-              href="html/multiplicar.html"
-              class="btn font-weight-bold btn-lg"
-              >Ir!</a
-            >
+      <form method="get" id="form">
+        <div class="row mb-2">
+          <div class="col">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              placeholder="Tabla de multiplicar: 5"
+              aria-label="Tabla de multiplicar"
+              name="multBase"
+              required
+            />
+          </div>
+          <div class="col">
+            <input
+              type="number"
+              class="form-control form-control-lg"
+              placeholder="Hasta donde llegara la tabla: 10"
+              aria-label="Hasta donde llegara la tabla"
+              name="multLim"
+            />
           </div>
         </div>
-        <div class="card carta2">
-          <img
-            src="assets/matriz.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title h3 font-weight-bold">
-              Matriz de números
-            </h5>
-            <p class="card-text">
-              Ingresa el ancho y alto de la matriz. La
-              llenaremos de numeros aleatorios en un
-              intervalo que tu nos digas!
-            </p>
-            <a
-              href="html/matriz.html"
-              class="btn font-weight-bold btn-lg"
-              >Ir!</a
+        <div class="row">
+          <div class="col">
+            <button
+              type="submit"
+              class="btn btn-lg btn-block font-weight-bold"
             >
+              Calcular!
+            </button>
           </div>
         </div>
+      </form>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="cerrarModal()"
+          >&times;</span
+        >
+        <p>Pagado</p>
+        <button onclick="regresarAlMenu()">OK</button>
       </div>
     </div>
   </body>

@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+
+?>
 <html lang="en">
 
 <head>
@@ -15,7 +17,9 @@
   <!-- styles -->
   <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/navbar.css" />
-  <link rel="stylesheet" href="../styles/form.css">
+  <link rel="stylesheet" href="../styles/form.css" />
+  <!-- script -->
+  <script src="../script/modal.js"></script>
   <title>ARRAYS</title>
 </head>
 
@@ -24,11 +28,9 @@
     <nav class="navbar navbar-expand-xl">
       <a class="navbar-brand" href="#">
         <h1 class="h3">
-          Matriz
+          Multiplicar
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon">
-              <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
-            </span>
+            <span class="navbar-toggler-icon"><span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span></span>
           </button>
         </h1>
       </a>
@@ -40,15 +42,15 @@
               Menu principal
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="multiplicar.php">
-              Tabla de Multiplicar
-            </a>
-          </li>
           <li class="nav-item active">
             <a class="nav-link h4" href="#">
-              Matriz de Números
+              Tabla de Multiplicar
               <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="../html/matriz.html">
+              Matriz de Números
+            </a>
           </li>
         </ul>
       </div>

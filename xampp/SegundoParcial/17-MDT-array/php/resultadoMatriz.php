@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+
+?>
 <html lang="en">
 
 <head>
@@ -15,7 +17,9 @@
   <!-- styles -->
   <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/navbar.css" />
-  <link rel="stylesheet" href="../styles/form.css">
+  <link rel="stylesheet" href="../styles/form.css" />
+  <!-- script -->
+  <script src="../script/modal.js"></script>
   <title>ARRAYS</title>
 </head>
 
@@ -24,9 +28,11 @@
     <nav class="navbar navbar-expand-xl">
       <a class="navbar-brand" href="#">
         <h1 class="h3">
-          Multiplicar
+          Matriz
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span></span>
+            <span class="navbar-toggler-icon">
+              <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
+            </span>
           </button>
         </h1>
       </a>
@@ -38,55 +44,19 @@
               Menu principal
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link h4" href="../html/multiplicar.html">
+              Tabla de Multiplicar
+            </a>
+          </li>
           <li class="nav-item active">
             <a class="nav-link h4" href="#">
-              Tabla de Multiplicar
-              <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link h4" href="matriz.php">
               Matriz de Números
-            </a>
+              <span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
     </nav>
-    <form action="php/form.php" method="get" id="form">
-      <div class="row mb-2">
-        <div class="col">
-          <input type="text" class="form-control form-control-lg" placeholder="Nombre" aria-label="nombre" name="nombre" required />
-        </div>
-        <div class="col">
-          <input type="text" class="form-control form-control-lg" placeholder="Apellido" aria-label="apellido" name="apellido" required />
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col">
-          <select id="habitacion" class="form-control form-control-lg" aria-label="habitacion" name="habitacion" required>
-            <option value="" disabled selected hidden>
-              Selecciona una habitación
-            </option>
-            <option value="1">Habitación 1</option>
-            <option value="2">Habitación 2</option>
-            <option value="3">Habitación 3</option>
-            <option value="4">Habitación 4</option>
-            <option value="5">Habitación 5</option>
-          </select>
-        </div>
-      </div>
-      <div class="row mb-2">
-        <div class="col">
-          <input type="number" class="form-control form-control-lg" placeholder="Días de estancia" aria-label="días de estancia" name="dias" id="diasEstancia" required />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <button type="submit" class="btn btn-lg btn-block">
-            Submit
-          </button>
-        </div>
-      </div>
-    </form>
   </div>
 </body>
 <!-- scripts -->
