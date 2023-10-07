@@ -85,7 +85,7 @@
 
   <div class="contenedor">
     <div class="btnHolder">
-      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../html/matriz.html')">Regresar</button>
+      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../index.html')">Regresar</button>
     </div>
     <table class="table">
       <tbody>

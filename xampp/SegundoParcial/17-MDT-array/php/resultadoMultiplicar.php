@@ -70,7 +70,7 @@ if ($multLim == null)
       <form action="resultadoMultiplicar.php" method="get" id="form">
         <div class="row mb-2">
           <div class="col">
-            <input type="number" class="form-control form-control-lg" placeholder="Tabla de multiplicar: 5" aria-label="Tabla de multiplicar" name="multBase" value="<?php echo $multBase ?>" d />
+            <input type="float" class="form-control form-control-lg" placeholder="Tabla de multiplicar: 5" aria-label="Tabla de multiplicar" name="multBase" value="<?php echo $multBase ?>" d />
           </div>
           <div class="col">
             <input type="number" class="form-control form-control-lg" placeholder="Hasta donde llegara la tabla: 10" aria-label="Hasta donde llegara la tabla" name="multLim" value="<?php echo $multLim ?>" d />
@@ -88,7 +88,7 @@ if ($multLim == null)
   </div>
   <div class="contenedor">
     <div class="btnHolder">
-      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../html/matriz.html')">Regresar</button>
+      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../index.html')">Regresar</button>
     </div>
     <table class="table table-striped">
       <thead>
