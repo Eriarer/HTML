@@ -9,6 +9,14 @@
   overflow: auto;
 }
 
+/* separar de manera uniforme las columnas */
+.contenedor > table {
+  table-layout: fixed;
+  width: 100%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
 /* Estilo de la barra de desplazamiento */
 .contenedor::-webkit-scrollbar {
   width: 12px; /* Ancho de la barra de desplazamiento */
@@ -28,23 +36,10 @@
   border-radius: 1rem; /* Bordes redondeados del pulgar */
 }
 
-/* separar de manera uniforme las columnas */
-.contenedor > table {
-  border-collapse: collapse;
-}
-
-.contenedor > table > thead > tr > th,
-.contenedor > table > tbody > tr > td,
-.contenedor > table > tfoot > tr > td {
-  color: #002543;
-  text-align: center;
-  width: 25%;
-}
-
 /* Estilo para el botón de regresar */
 .contenedor > .btnHolder {
   position: relative;
-  top: -0.5rem;
+  top: 0;
   left: 0;
   display: flex;
   justify-content: center;
@@ -58,15 +53,38 @@
   border-radius: 3rem;
 }
 
+.contenedor > table > tbody > tr > td {
+  color: #002543;
+  width: 4em;
+  height: 4em;
+  border: none;
+  border-radius: 1rem;
+  vertical-align: middle;
+  text-align: center;
+  justify-content: center;
+}
+
+td.par {
+  background-color: #8fb8ff;
+}
+
+td.impar {
+  background-color: #b3d1ff;
+}
+
+td.impar {
+  border: #002543 1px solid;
+}
+
+.btnHolder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
 /* Modifica el ancho de las columnas de la tabla en dispositivos pequeños */
 @media screen and (max-width: 1000px) {
-  .contenedor > table > thead > tr > th,
-  .contenedor > table > tbody > tr > td,
-  .contenedor > table > tfoot > tr > td {
-    width: auto; /* Deja que las columnas se ajusten automáticamente */
-    white-space: nowrap; /* Evita el ajuste de texto en varias líneas */
-  }
-
   .contenedor > table {
     width: 100%; /* Ajusta la tabla al 100% del contenedor */
   }

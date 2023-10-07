@@ -1,6 +1,3 @@
-<?php
-
-?>
 <html lang="en">
 
 <head>
@@ -15,11 +12,11 @@
   <!-- font awesome -->
   <script src="https://kit.fontawesome.com/3a39e9961a.js" crossorigin="anonymous"></script>
   <!-- styles -->
-  <link rel="stylesheet" href="../styles/style.css" />
   <link rel="stylesheet" href="../styles/navbar.css" />
   <link rel="stylesheet" href="../styles/form.css" />
+  <link rel="stylesheet" href="../styles/matTable.css" />
   <!-- script -->
-  <script src="../script/modal.js"></script>
+  <script src="../script/meuBack.js"></script>
   <title>ARRAYS</title>
 </head>
 
@@ -50,13 +47,73 @@
             </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link h4" href="#">
+            <a class="nav-link h4" href="../html/matriz.html">
               Matriz de Números
               <span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
     </nav>
+    <div class="formulario">
+      <form method="get" id="form">
+        <div class="row mb-2">
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="Filas" aria-label="Filas" name="rows" min="1" value="<?php echo $_GET['rows'] ?>" />
+          </div>
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="Columnas" aria-label="Columnas" name="cols" min="1" value="<?php echo $_GET['cols'] ?>" />
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="N menor" aria-label="Numero menor" name="min" id="min" value="<?php echo $_GET['min'] ?>" />
+          </div>
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="N mayor" aria-label="Numero mayor" name="max" id="max" value="<?php echo $_GET['max'] ?>" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="submit" class="btn btn-lg btn-block font-weight-bold">
+              Calcular!
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="contenedor">
+    <div class="btnHolder">
+      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../html/matriz.html')">Regresar</button>
+    </div>
+    <table class="table">
+      <tbody>
+        <?php
+        $rows = $_GET['rows'];
+        $cols = $_GET['cols'];
+        $min = $_GET['min'];
+        $max = $_GET['max'];
+        for ($i = 0; $i < $rows; $i++)
+        {
+          echo "<tr>";
+          for ($j = 0; $j < $cols; $j++)
+          {
+            $random = rand($min, $max);
+            if ($random % 2 == 0)
+            {
+              echo "<td class='par'>$random</td>";
+            }
+            else
+            {
+              echo "<td class='impar'>$random</td>";
+            }
+          }
+          echo "</tr>";
+        }
+        ?>
+      </tbody>
+    </table>
   </div>
 </body>
 <!-- scripts -->

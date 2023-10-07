@@ -1,5 +1,16 @@
 <?php
+$multLim = rand(-10, 10);
 
+$multBase = $_GET['multBase'];
+$multLim = $_GET['multLim'];
+if ($multBase == null)
+{
+  $multBase = rand(-10, 10);
+}
+if ($multLim == null)
+{
+  $multLim = rand(-10, 10);
+}
 ?>
 <html lang="en">
 
@@ -19,7 +30,7 @@
   <link rel="stylesheet" href="../styles/form.css" />
   <link rel="stylesheet" href="../styles/modalMult.css" />
   <!-- script -->
-  <script src="../script/modal.js"></script>
+  <script src="../script/meuBack.js"></script>
   <title>ARRAYS</title>
 </head>
 
@@ -43,7 +54,7 @@
             </a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link h4" href="#">
+            <a class="nav-link h4" href="../html/multiplicar.html">
               Tabla de Multiplicar
               <span class="sr-only">(current)</span></a>
           </li>
@@ -56,18 +67,18 @@
       </div>
     </nav>
     <div class="formulario">
-      <form action="../php/resultadoMultiplicar.php" method="get" id="form">
+      <form action="resultadoMultiplicar.php" method="get" id="form">
         <div class="row mb-2">
           <div class="col">
-            <input type="number" class="form-control form-control-lg" placeholder="Tabla de multiplicar: 5" aria-label="Tabla de multiplicar" name="multBase" value="<?php echo isset($_GET['multBase']) ? $_GET['multBase'] : ''; ?>" disabled />
+            <input type="number" class="form-control form-control-lg" placeholder="Tabla de multiplicar: 5" aria-label="Tabla de multiplicar" name="multBase" value="<?php echo $multBase ?>" d />
           </div>
           <div class="col">
-            <input type="number" class="form-control form-control-lg" placeholder="Hasta donde llegara la tabla: 10" aria-label="Hasta donde llegara la tabla" name="multLim" value="<?php echo isset($_GET['multLim']) ? $_GET['multLim'] : ''; ?>" disabled />
+            <input type="number" class="form-control form-control-lg" placeholder="Hasta donde llegara la tabla: 10" aria-label="Hasta donde llegara la tabla" name="multLim" value="<?php echo $multLim ?>" d />
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <button type="submit" class="btn btn-lg btn-block font-weight-bold" disabled>
+            <button type="submit" class="btn btn-lg btn-block font-weight-bold" d>
               Calcular!
             </button>
           </div>
@@ -76,7 +87,9 @@
     </div>
   </div>
   <div class="contenedor">
-    <button class="btn btn-block" onclick="regresarAlMenu('../html/multiplicar.html')">Regresar</button>
+    <div class="btnHolder">
+      <button class="btn btn-lg font-weight-bold " onclick="cambiarPagina('../html/matriz.html')">Regresar</button>
+    </div>
     <table class="table table-striped">
       <thead>
         <tr>
@@ -87,17 +100,6 @@
       </thead>
       <tbody>
         <?php
-        if (isset($_GET['multBase']) && isset($_GET['multLim']))
-        {
-          $multBase = $_GET['multBase'];
-          $multLim = $_GET['multLim'];
-        }
-        else
-        {
-          // numero aleatorio de  a 10
-          $multBase = 5;
-          $multLim = 15;
-        }
         if ($multLim >= 0)
         {
           for ($i = 0; $i <= $multLim; $i++)
@@ -127,7 +129,6 @@
       </tbody>
     </table>
     <hr>
-    <button class="btn btn-block" onclick="regresarAlMenu('../html/multiplicar.html')">Regresar</button>
   </div>
 </body>
 <!-- scripts -->

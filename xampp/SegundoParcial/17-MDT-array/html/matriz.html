@@ -30,9 +30,10 @@
       crossorigin="anonymous"
     ></script>
     <!-- styles -->
-    <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/navbar.css" />
     <link rel="stylesheet" href="../styles/form.css" />
+    <!-- script -->
+    <script src="../script/mayorMenor.js"></script>
     <title>ARRAYS</title>
   </head>
 
@@ -87,6 +88,72 @@
           </ul>
         </div>
       </nav>
+      <div class="formulario">
+        <form
+          action="../php/resultadoMatriz.php"
+          method="get"
+          id="form"
+        >
+          <div class="row mb-2">
+            <div class="col">
+              <input
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="Filas"
+                aria-label="Filas"
+                name="rows"
+                required
+                min="1"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="Columnas"
+                aria-label="Columnas"
+                name="cols"
+                required
+                min="1"
+              />
+            </div>
+          </div>
+          <div class="row mb-2">
+            <div class="col">
+              <input
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="N menor"
+                aria-label="Numero menor"
+                name="min"
+                id="min"
+                required
+              />
+            </div>
+            <div class="col">
+              <input
+                type="number"
+                class="form-control form-control-lg"
+                placeholder="N mayor"
+                aria-label="Numero mayor"
+                name="max"
+                id="max"
+                required
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button
+                type="submit"
+                class="btn btn-lg btn-block font-weight-bold"
+              >
+                Calcular!
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
   <!-- scripts -->
