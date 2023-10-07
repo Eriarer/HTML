@@ -1,7 +1,6 @@
 * {
   font-size: large;
   font-family: Arial, Helvetica, sans-serif;
-  width: 100%;
   color: #d0efff;
 }
 
@@ -22,7 +21,6 @@ body {
 }
 
 .formulario {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
