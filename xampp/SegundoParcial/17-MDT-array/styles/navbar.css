@@ -1,0 +1,30 @@
+div > nav {
+  grid-area: nav;
+  background: #03254c;
+  padding: 2rem;
+  font-weight: bolder;
+}
+
+a {
+  color: #d0efff;
+  transition: 0.1s;
+}
+
+a:hover {
+  color: #50c5ff;
+}
+
+.active > a {
+  color: #ecf9ff;
+  font-weight: bold;
+}
+
+.active > a:hover {
+  color: #50c5ff;
+}
+
+.navbar-toggler-icon > * {
+  border-radius: 0.5rem;
+  color: #d0efff;
+  font-size: 2rem;
+}
