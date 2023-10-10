@@ -34,12 +34,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
         <div class="form-row">
           <div class="form-group col">
-            <p>Tamaño vector: <span id="sliderValue">0</span></p>
+            <label for="arrSize">Tamaño vector: <span id="sliderValue">0</span></label>
             <div class="sliderContainer">
               <p>0</p>
-              <input type="range" class="form-control-range" id="slider" min="0" max="100" value="50">
+              <input type="range" class="form-control-range" name="arrSize" id="slider" min="0" max="100" value="50">
               <p>100</p>
             </div>
+          </div>
+        </div>
+        <div class="row mb-2">
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="N menor" aria-label="Numero menor" name="min" id="min" required />
+          </div>
+          <div class="col">
+            <input type="number" class="form-control form-control-lg" placeholder="N mayor" aria-label="Numero mayor" name="max" id="max" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <button type="submit" class="btn btn-lg btn-block font-weight-bold">
+              Calcular!
+            </button>
           </div>
         </div>
       </form>
