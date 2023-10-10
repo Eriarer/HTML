@@ -5,6 +5,39 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $min = $_POST['min'];
   $max = $_POST['max'];
 }
+
+function genArray()
+{
+  global $arrSize, $min, $max;
+  $arr = array();
+  $i = 0;
+  while ($i < $arrSize) {
+    $num = rand($min, $max);
+    if (!in_array($num, $arr)) {
+      $arr[$i] = $num;
+      $i++;
+    }
+  }
+  return $arr;
+}
+
+function printArr($arr)
+{
+  foreach ($arr as $key => $value) {
+    echo "<p>$value</p>";
+  }
+}
+
+function promedio($arr)
+{
+  global $arrSize;
+  $sum = 0;
+  foreach ($arr as $key => $value) {
+    $sum += $value;
+  }
+  // RETORNAR  valor truncado a 2 decimales
+  return round($sum / $arrSize, 2);
+}
 ?>
 <html lang="es">
 
@@ -67,34 +100,38 @@ min y max -->
     } else {
       // generar un arreglo de tamaño arrSize 
       // con numeros aleatorios entre min y max sin repetir
-      $arr = array();
-      $i = 0;
-      while ($i < $arrSize) {
-        $num = rand($min, $max);
-        if (!in_array($num, $arr)) {
-          $arr[$i] = $num;
-          $i++;
-        }
-      }
+      $arr = genArray();
       // copiar el $arr y ordenarlo
+      // desordenar el vector orriginal
       // de menor a mayor
       // de mayor a menor
       // obtener el mayor y el menor
       $arrCopy = $arr;
-      sort($arrCopy);
+      shuffle($arrCopy);
+      $arrCopy1 = $arr;
+      sort($arrCopy1);
       $arrCopy2 = $arrCopy;
       rsort($arrCopy2);
-      $min = $arrCopy[0];
+      $min = $arrCopy1[0];
       $max = $arrCopy2[0];
+      $promedio = promedio($arr);
     ?>
+      <!-- vector original -->
       <div class="vector">
-        <h2>Vector</h2>
+        <h2>Vector original</h2>
         <div class='vectorItem'>
           <?php
-          foreach ($arr as $key => $value) {
-            echo "<p>$value</p>";
-          }
+          printArr($arr);
           ?>
+        </div>
+      </div>
+      <!-- info general -->
+      <div class="vector">
+        <h2>Info general</h2>
+        <div class='vectorItem'>
+          <p>Menor: <?php echo $min; ?></p>
+          <p>Mayor: <?php echo $max; ?></p>
+          <p>Promedio: <?php echo $promedio; ?></p>
         </div>
       </div>
       <!-- vector ordenado -->
@@ -102,9 +139,7 @@ min y max -->
         <h2>Vector de Menor a Mayor</h2>
         <div class='vectorItem'>
           <?php
-          foreach ($arrCopy as $key => $value) {
-            echo "<p>$value</p>";
-          }
+          printArr($arrCopy1);
           ?>
         </div>
       </div>
@@ -113,18 +148,17 @@ min y max -->
         <h2>Vector de Mayor a Menor</h2>
         <div class='vectorItem'>
           <?php
-          foreach ($arrCopy2 as $key => $value) {
-            echo "<p>$value</p>";
-          }
+          printArr($arrCopy2);
           ?>
         </div>
       </div>
-      <!-- mayor y menor -->
+      <!-- vector desordenado -->
       <div class="vector">
-        <h2>Menor y Mayor</h2>
+        <h2>Vector desordenado</h2>
         <div class='vectorItem'>
-          <p>Menor: <?php echo $min; ?></p>
-          <p>Mayor: <?php echo $max; ?></p>
+          <?php
+          printArr($arrCopy);
+          ?>
         </div>
       </div>
     <?php  } ?>
