@@ -1,0 +1,29 @@
+body {
+  background: #d0eeff;
+}
+
+.heading {
+  background: #213555;
+  color: #f0f0f0;
+}
+
+.heading h4 {
+  color: #e5d283;
+}
+
+.badge-custom {
+  background: #4f709c;
+  color: #f0f0f0;
+}
+
+.etiqueta {
+  border: none;
+  background: #213555;
+  color: #f0f0f0;
+}
+
+.entrada {
+  background: #f0f0f0;
+  color: #213555;
+  border-color: #213555;
+}
