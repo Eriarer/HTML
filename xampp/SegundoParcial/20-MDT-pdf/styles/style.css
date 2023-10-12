@@ -5,6 +5,8 @@ body {
 .heading {
   background: #213555;
   color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
 }
 
 .heading h4 {

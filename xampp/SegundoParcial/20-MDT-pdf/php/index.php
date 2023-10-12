@@ -124,12 +124,21 @@ addFormattedText($pdf, "firma", true);
   <!-- header y formulario -->
   <div class="wrapper">
     <div class="heading px-0 pb-2 px-sm-3 px-md-5 m-0 w-100">
-      <h1>Constancia de estudios</h1>
-      <h4>Melgoza de la Torre Abraham</h4>
+      <div class="names">
+        <h1>Constancia de estudios</h1>
+        <h4>Melgoza de la Torre Abraham</h4>
+      </div>
+      <!-- agregar un boton hasta la derecha que te regrese al ../index.html -->
+      <div class="boton d-flex align-items-center">
+        <a href="../index.html" class="btn btn-primary btn-lg d-flex align-items-center justify-content-center h-50">Regresar</a>
+      </div>
     </div>
-    <article class="pdfView">
-      <iframe src="data:application/pdf;base64,<?php echo base64_encode($pdf->Output('S')); ?>" width="100%" height="100%"></iframe>
-    </article>
+    <div class="pdfView ">
+
+      <object data="data:application/pdf;base64,<?php echo base64_encode($pdf->Output('S')); ?>" type="application/pdf" width="100%" height="100%">
+        <embed src="data:application/pdf;base64,<?php echo base64_encode($pdf->Output('S')); ?>" type="application/pdf" width="100%" height="100%" />
+      </object>
+    </div>
   </div>
 </body>
 <!-- Boostrap v4.6.% -->
