@@ -1,0 +1,66 @@
+.bg-custom {
+  background: #213555;
+  color: #d0eeff;
+}
+
+.search {
+  background: #4f709c;
+  color: #d0eeff;
+  border: none;
+}
+
+.search::placeholder {
+  color: #d0eeff;
+}
+
+.search:focus {
+  background: #4f709c;
+  color: #d0eeff;
+}
+
+.search:focus::placeholder {
+  color: #d0eeff;
+}
+
+.search::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px; /* Ajusta el ancho */
+  height: 16px; /* Ajusta el alto */
+  background-color: #bd0000; /* Cambia el color de fondo */
+  border-radius: 50%; /* Redondea el botón */
+  cursor: pointer; /* Cambia el cursor al pasar sobre la "x" */
+  font-size: 14px; /* Ajusta el tamaño de la fuente si es necesario */
+  line-height: 16px;
+}
+
+.badge {
+  font-size: 30px;
+}
+
+.pieDePagina {
+  background: #213555;
+  color: #d0eeff;
+  padding: 2vw;
+  border-radius: 5px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  font-size: 3vw;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.space {
+  height: 100px;
+}
+
+th {
+  background: #213555;
+  color: #d0eeff;
+}
+
+td {
+  background: #4f709c;
+  color: #d0eeff;
+}
