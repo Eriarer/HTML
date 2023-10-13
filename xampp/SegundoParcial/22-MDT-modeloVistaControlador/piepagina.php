@@ -5,7 +5,7 @@
 
 <body>
   <div class="space"></div>
-  <div class="pieDePagina text-center h6">
+  <div class="pieDePagina text-center h2 p-3">
     Melgoza de la Torre Abraham 10/13/23
   </div>
 </body>
