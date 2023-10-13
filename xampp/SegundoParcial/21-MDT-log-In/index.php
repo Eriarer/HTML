@@ -1,17 +1,20 @@
 <?php
 
+$error = 0;
 
+// contraseñas encriptadas con password_hash
 $usuarios = array(
-  'user' => '$2y$10$6ZiWOvv29.vIAq0F6ScnA.aEXRZMrPRQPxcWaqqRKTzu2nF7ik2bK', //12345
-  'invitado' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
-  'guest' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
+  'user' => '$2y$10$6ZiWOvv29.vIAq0F6ScnA.aEXRZMrPRQPxcWaqqRKTzu2nF7ik2bK',
+  'invitado' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y',
+  'guest' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y',
   'eri' => '$2y$10$hYK.lPNu3SlHndkZyajW...0BMMLBCe5.Bcu/lIX0H1J1E3mmd0pG'
 );
 
 function usuarioExiste($usuario)
 {
   global $usuarios;
-  if (array_key_exists($usuario, $usuarios)) {
+  if (array_key_exists($usuario, $usuarios))
+  {
     return true;
   }
   return false;
@@ -20,7 +23,8 @@ function usuarioExiste($usuario)
 function verificarPassword($usuario, $password)
 {
   global $usuarios;
-  if (password_verify($password, $usuarios[$usuario])) {
+  if (password_verify($password, $usuarios[$usuario]))
+  {
     return true;
   }
   return false;
@@ -28,16 +32,19 @@ function verificarPassword($usuario, $password)
 
 function verificarUsuario($usuario, $password): int
 {
-  if (!usuarioExiste($usuario)) {
+  if (!usuarioExiste($usuario))
+  {
     return 1;
   }
-  if (!verificarPassword($usuario, $password)) {
+  if (!verificarPassword($usuario, $password))
+  {
     return 2;
   }
   return 0;
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST')
+{
   global $error;
 
   $error = 0;
@@ -70,7 +77,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </div>
     </article>
     <?php
-    if (!function_exists('password_verify')) {
+    if (!function_exists('password_verify'))
+    {
     ?>
       <div class="alert alert-danger" role="alert">
         <h4 class="alert-heading">Error</h4>
@@ -79,7 +87,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <p class="mb-0">Actualiza tu version de PHP</p>
       </div>
     <?php
-    } else if ($error != 0 || !isset($_POST['usuario'])) {
+    }
+    else if ($error != 0 || !isset($_POST['usuario']))
+    {
     ?>
       <article class="logIng">
         <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
@@ -89,7 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="user" class="formLabel">Usuario</label>
                 <input type="text" class="form-control" id="user" aria-describedby="usuario" name="usuario" value="<?php if (isset($usuario))  echo $usuario; ?>">
                 <?php
-                if ($error == 1) {
+                if ($error == 1)
+                {
                   echo '<small id="emailHelp" class="form-text text-danger error">El usuario no existe</small>';
                 }
                 ?>
@@ -100,7 +111,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <label for="password" class="formLabel">Contraseña</label>
                 <input type="password" class="form-control" id="password" name="password">
                 <?php
-                if ($error == 2) {
+                if ($error == 2)
+                {
                   echo '<small id="emailHelp" class="form-text text-danger error">Contraseña incorrecta</small>';
                 }
                 ?>
@@ -114,7 +126,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       </article>
 
     <?php
-    } else {
+    }
+    else
+    {
     ?>
       <article class="welcome">
         <div class="modal-dialog">
