@@ -32,8 +32,7 @@ function addTitle($pdf, $title)
 
 
 //verificar que vengamos de un post lleno
-if (!($_SERVER['REQUEST_METHOD'] == 'POST'))
-{
+if (!($_SERVER['REQUEST_METHOD'] == 'POST')) {
   // cambiar al documento ../index.html
   header('Location: ../index.html');
 }
@@ -44,6 +43,7 @@ if (!($_SERVER['REQUEST_METHOD'] == 'POST'))
 $nombreAlumno = validarCadena($_POST['nombres']);
 $apellidos = validarCadena($_POST['apellidos']);
 $nombreCompleto = validarCadena($nombreAlumno . ' ' . $apellidos);
+$profesor = validarCadena($_POST['profesor']);
 $curso = validarCadena($_POST['curso']);
 $horas = $_POST['horasCurso'];
 $fechaFin = $_POST['fechaFin'];
@@ -63,12 +63,9 @@ addTitle($pdf, 'CONSTANCIA DE ESTUDIOS');
 
 function addFormattedText($pdf, $text, $bold = false, $addNewLine = false)
 {
-  if ($bold)
-  {
+  if ($bold) {
     $pdf->SetFont('courier', 'B', 18); // Fuente en negritas (puedes cambiar a Arial u otra fuente compatible)
-  }
-  else
-  {
+  } else {
     $pdf->SetFont('courier', '', 18); // Fuente normal (puedes cambiar a Arial u otra fuente compatible)
   }
 
@@ -78,8 +75,7 @@ function addFormattedText($pdf, $text, $bold = false, $addNewLine = false)
 
   //$pdf->MultiCell(0, 5, $text, 0, 'J'); // Texto justificado
 
-  if ($addNewLine)
-  {
+  if ($addNewLine) {
     $pdf->Ln(10); // Agregar salto de línea
   }
 }
@@ -92,6 +88,8 @@ addFormattedText($pdf, "El alumno");
 addFormattedText($pdf, " $nombreCompleto ", true);
 addFormattedText($pdf, "ha participado y dado fin al curso de");
 addFormattedText($pdf, " $curso ", true);
+addFormattedText($pdf, "impartido por el profesor");
+addFormattedText($pdf, " $profesor ", true);
 addFormattedText($pdf, "con una duración de $horas horas de manera excelente, el cual concluyó el día");
 addFormattedText($pdf, " $fechaFin ", true, true);
 addFormattedText($pdf, "Avalado por el director Juan Pérez Pérez");
