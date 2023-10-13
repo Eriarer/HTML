@@ -16,7 +16,6 @@ include "modelo.php";
   }
   ?>
 </div>
-<div class="space"></div>
 <?php
 include "piepagina.php";
 ?>
