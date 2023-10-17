@@ -1,3 +1,6 @@
+* {
+  font-size: large;
+}
 .heading {
   background: royalblue;
   color: #fff;
@@ -6,7 +9,7 @@
 
 .card {
   width: 100%;
-  max-width: 30rem;
+  max-width: 50rem;
 }
 
 pre {
@@ -23,5 +26,5 @@ select {
 .mascotas {
   overflow: auto;
   height: 100%;
-  max-height: 12.4rem;
+  max-height: 50vh;
 }

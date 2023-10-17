@@ -33,7 +33,8 @@
                 <option value="" selected disabled hidden>Seleccionar...</option>
                 <?php
                 // recorrer niveles de estudios
-                foreach ($nivelEstudios as $key => $value) {
+                foreach ($nivelEstudios as $key => $value)
+                {
                 ?>
                   <option value="<?php echo $value ?>"><?php echo $value ?></option>
                 <?php } ?>
@@ -53,7 +54,8 @@
                 <option value="" selected disabled hidden>Seleccionar..</option>
                 <?php
                 // recorrer colores
-                foreach ($colores as $key => $value) {
+                foreach ($colores as $key => $value)
+                {
                 ?>
                   <option value="<?php echo $value ?>"><?php echo $value ?></option>
                 <?php } ?>
@@ -65,7 +67,8 @@
           <article class="mascotas m-2">
             <?php
             // recorrer mascotas
-            foreach ($mascotas as $key => $value) {
+            foreach ($mascotas as $key => $value)
+            {
             ?>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -77,7 +80,7 @@
               </div>
             <?php } ?>
           </article>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary btn-lg">Submit</button>
         </form>
       </div>
     </div>
