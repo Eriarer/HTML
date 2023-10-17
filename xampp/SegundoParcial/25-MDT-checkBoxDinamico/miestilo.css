@@ -1,0 +1,27 @@
+.heading {
+  background: royalblue;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 30rem;
+}
+
+pre {
+  background: #eee;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+select {
+  width: 100%;
+  max-width: 18rem;
+}
+
+.mascotas {
+  overflow: auto;
+  height: 100%;
+  max-height: 12.4rem;
+}
