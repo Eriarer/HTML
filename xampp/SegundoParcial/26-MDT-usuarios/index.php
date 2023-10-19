@@ -88,11 +88,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         <div class="lastMod d-flex flex-column align-items-center justify-content-center">
           <h4>Ultima modificacion</h4>
           <h5>
-            <!-- last date -->
             <?php
             echo date("d-m-Y h", getlastmod());
-            ?>
-          </h5>
+            ?></h5>
         </div>
       </div>
     </article>

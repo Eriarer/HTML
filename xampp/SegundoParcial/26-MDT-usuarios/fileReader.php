@@ -151,7 +151,7 @@ class FileReader
       {
         if ($word !== '')
         {
-          return $word;
+          return trim($word);
         }
       }
       else
@@ -159,6 +159,8 @@ class FileReader
         $word .= $char;
       }
     }
+    //quitarle los saltos de linea al final
+    $word = rtrim($word, "\n");
     return ($word !== '') ? $word : null;
   }
 
@@ -170,9 +172,11 @@ class FileReader
       $line .= $char;
       if ($char === "\n")
       {
-        return $line;
+        return trim($line);
       }
     }
+    //quitarle los saltos de linea al final
+    $line = rtrim($line, "\n");
     return ($line !== '') ? $line : null;
   }
 
