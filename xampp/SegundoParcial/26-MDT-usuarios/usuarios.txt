@@ -1,0 +1,4 @@
+user $2y$10$6ZiWOvv29.vIAq0F6ScnA.aEXRZMrPRQPxcWaqqRKTzu2nF7ik2bK
+invitado $2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y
+guest $2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y
+eri $2y$10$hYK.lPNu3SlHndkZyajW...0BMMLBCe5.Bcu/lIX0H1J1E3mmd0pG

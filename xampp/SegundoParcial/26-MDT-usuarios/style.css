@@ -1,0 +1,49 @@
+body {
+  background: #d0eeff;
+}
+
+.heading {
+  background: #213555;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.names h4,
+.lastMod h5,
+.modal-title,
+.usuario {
+  color: #e5d283;
+}
+
+.logIng {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 2rem;
+}
+
+.logIng > form {
+  width: 100%;
+  max-width: 40rem;
+  padding: 2rem;
+  background: #4f709c;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.error {
+  font-weight: bold;
+  text-shadow: #f0f0f0 0 0 0.5rem;
+}
+
+.formLabel {
+  color: #f0f0f0;
+  font-weight: bolder;
+}
+
+.modal-content {
+  background: #213555;
+  color: #d0eeff;
+}
