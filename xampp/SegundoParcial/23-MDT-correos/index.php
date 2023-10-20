@@ -83,7 +83,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                   probablemente esté en la carpeta de spam.</p>
               </div>
               <div class="modal-footer">
-                <a type="submit" class="btn btn-info" href="<?php echo $_SERVER['PHP_SELF']; ?>">Regresar</a>
+                <a type="submit" class="btn btn-info" href="<?php $_SESSION['emailSent'] = false;
+                                                            echo $_SERVER['PHP_SELF']; ?>">Regresar</a>
               </div>
             </div>
           </div>
@@ -105,7 +106,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <p>Lo sentimos, los servidores están ocupados, inténtalo más tarde.</p>
               </div>
               <div class="modal-footer">
-                <a type="submit" class="btn btn-info" href="<?php echo $_SERVER['PHP_SELF']; ?>">Regresar</a>
+                <a type="submit" class="btn btn-info" href="<?php $_SESSION['emailSent'] = false;
+                                                            echo $_SERVER['PHP_SELF']; ?>">Regresar</a>
               </div>
             </div>
           </div>
@@ -115,6 +117,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } // fin catch
   } else {
     // Redirecciona si ya se ha enviado el correo
+    $_SESSION['emailSent'] = false;
     header('Location: ' . $_SERVER['PHP_SELF']);
     exit();
   }
