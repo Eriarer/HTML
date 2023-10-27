@@ -31,7 +31,10 @@ $auth_users = array(
     'user' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
     'invitado' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
     'guest' => '$2y$10$dDTmdiveZHu1druMusjARuCe7sVSg/t4pc6Vc8TTdXZdVJa7Zzk7y', //1234
-    'eri' => '$2y$10$hYK.lPNu3SlHndkZyajW...0BMMLBCe5.Bcu/lIX0H1J1E3mmd0pG'
+    'eri' => '$2y$10$hYK.lPNu3SlHndkZyajW...0BMMLBCe5.Bcu/lIX0H1J1E3mmd0pG',
+    'mari' => '$2y$10$tRF9SRFqO0s9YtTvpRvcaumcNJNnLllqttDi34WEGXT57B1tGgB2y',
+    'web1' => '$2y$10$vx9mDHN2h.hooZkDOV36OOF.5uMxRrqFIEcu.3mCvjeTr6TPL.D62',
+    'web2' => '$2y$10$EhFmkWUK.ljEWJPZCEyVzO2UldDYN5WHJp18MZbs44j/UvoY4wjq6'
 );
 
 // Readonly users
@@ -47,7 +50,10 @@ $global_readonly = false;
 
 // user specific directories
 // array('Username' => 'Directory path', 'Username2' => 'Directory path', ...)
-$directories_users = array();
+$directories_users = array(
+  'web1' => '/home/eri/GitHub/Web-1/primerExamen',
+  'web2' => '/home/eri/GitHub/Web-1/segundoExamen'
+);
 
 // Enable highlight.js (https://highlightjs.org/) on view's page
 $use_highlightjs = true;
