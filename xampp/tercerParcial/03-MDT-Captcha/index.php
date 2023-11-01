@@ -28,9 +28,9 @@ $captcha = randomText();
   <p>
     Password: <input name="password" type="password" value="<?php if (isset($_COOKIE["password"])) echo $_COOKIE["password"]; ?>" />
   </p>
-  <p style="display: flex; justify-content: center;">
-    Ingrese el captcha: <span><?php echo $captcha; ?></span><input name="captchaAns" type="text" size="6" /><br>
-    <input type="hidden" name="captcha" value="<?php echo $captcha; ?>">
+  <p style="display: flex; flex-direction:column; justify-content: center;">
+  <p>Ingrese el captcha: <span><?php echo $captcha; ?></span></p><input name="captchaAns" type="text" size="6" />
+  <input type="hidden" name="captcha" value="<?php echo $captcha; ?>">
   </p>
   <p>
     <input type="checkbox" name="remember" /> Recordar usuario y contraseña
