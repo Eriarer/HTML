@@ -1,0 +1,44 @@
+* {
+  font-size: large;
+  color: #fff;
+}
+
+body {
+  background: #1e1e2f;
+}
+
+/* hacer que la tabla tenga bordes en todas las celdas */
+table {
+  border-collapse: collapse;
+  border: 1px solid #00002f;
+}
+
+/* hacer la tabla "stripped" */
+table tr:nth-child(even),
+table th:nth-child(even) {
+  background: #242442;
+}
+
+table tr:nth-child(odd),
+table th:nth-child(odd) {
+  background: #1a214d;
+}
+
+table td.rowT {
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* hacer que las celdas tengan bordes */
+table td,
+table th {
+  border: 1px solid #00002f;
+}
+
+table thead * {
+  background: #000044 !important;
+  border: 1px solid #1d1d3b;
+  font-size: larger;
+  text-align: center;
+}
