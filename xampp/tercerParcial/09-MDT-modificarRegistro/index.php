@@ -9,6 +9,21 @@ if ($conexion->connect_errno) {
   die('Error en la conexion');
 }
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  $idOg = $_POST['ogId'];
+  // buscar el usuario original
+  $usuarioOg = $conexion->query("SELECT * FROM usuarios WHERE id = '$idOg'")->fetch_assoc();
+  //obtener los datos del formulario
+  $id = empty($_POST['id']) ? $usuarioOg['id'] : $_POST['id'];
+  $nombre = empty($_POST['nombre']) ? $usuarioOg['nombre'] : $_POST['nombre'];
+  $cuenta = empty($_POST['cuenta']) ? $usuarioOg['cuenta'] : $_POST['cuenta'];
+  $contrasena = empty($_POST['contrasena']) ? $usuarioOg['contrasena'] : $_POST['contrasena'];
+  //actualizar los datos en la base de datos
+  $sql = "UPDATE usuarios SET id='$id', nombre='$nombre', cuenta='$cuenta', contrasena='$contrasena' WHERE id='$idOg'";
+  $conexion->query($sql);
+  $_SERVER['REQUEST_METHOD'] = null;
+}
+
 $resultado = $conexion->query("SELECT * FROM usuarios");
 //obtener todos los usuarios en un vector de usuarios
 $usuarios = array();
@@ -49,8 +64,14 @@ $self = $_SERVER['PHP_SELF'];
         <label for="ogId">Seleccionar usuario</label>
         <select class="browser-default custom-select" name='ogId' id="ogId">
           <?php
+          $first = true;
           foreach ($usuarios as $usuario) {
-            echo "<option value='{$usuario['id']}'>{$usuario['id']}</option>";
+            if ($first) {
+              echo '<option value="' . $usuario['id'] . '" selected>' . $usuario['id'] . '</option>';
+              $first = false;
+            } else {
+              echo '<option value="' . $usuario['id'] . '">' . $usuario['id'] . '</option>';
+            }
           }
           ?>
         </select>
@@ -67,28 +88,53 @@ $self = $_SERVER['PHP_SELF'];
           <tr>
             <th>ID</th>
             <td id="usrid"></td>
-            <td><input type="text" name="id" id="id" min="1" max="11" required></td>
+            <td><input type="text" name="id" id="id" min="1" max="11"></td>
           </tr>
           <tr>
             <th>Nombre</th>
             <td id="usrnom"></td>
-            <td><input type="text" name="nom" min="1" max="40" required></td>
+            <td><input type="text" name="nombre" min="1" max="40"></td>
           </tr>
           <tr>
             <th>Cuenta</th>
             <td id="usrcue"></td>
-            <td><input type="text" name="cue" min="1" max="8" required></td>
+            <td><input type="text" name="cuenta" min="1" max="8"></td>
           </tr>
           <tr>
             <th>Contraseña</th>
             <td id="usercon"></td>
-            <td><input type="password" name="con" min="1" max="8" required></td>
+            <td><input type="password" name="contrasena" min="1" max="8"></td>
         </tbody>
       </table>
       <div class="d-flex flex-column justify-content-center">
         <button type="submit" class="btn btn-dark">Editar</button>
       </div>
     </form>
+    <div class="container ">
+      <legend>Cuentas actuales</legend>
+      <div class="table-responsive">
+        <table class="table table-striped table-light">
+          <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Cuenta</th>
+            <th>Contraseña</th>
+          </thead>
+          <tbody>
+            <?php
+            foreach ($usuarios as $usuario) {
+              echo '<tr>
+                    <th>' . $usuario['id'] . '</th>
+                    <td>' . $usuario['nombre'] . '</td>
+                    <td>' . $usuario['cuenta'] . '</td>
+                    <td>' . $usuario['contrasena'] . '</td>
+                  </tr>';
+            }
+            ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   <script>
     //obtener los datos del arreglo de usuarios
@@ -124,6 +170,8 @@ $self = $_SERVER['PHP_SELF'];
       function validarFormulario() {
         //validar que el id no sea clon de otro (si es el mismo id que el original es valido)
         var id = document.getElementById('id').value;
+        //si el usuario no setea el id se toma el id original
+        return true;
         var ogId = document.getElementById('ogId').value;
         if (id != ogId) {
           var idExiste = usuarios.some(function(usuario) {
@@ -136,6 +184,7 @@ $self = $_SERVER['PHP_SELF'];
             return false;
           }
         }
+        return true;
       }
 
       function mostrarTooltip(mensaje) {
