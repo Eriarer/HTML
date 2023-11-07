@@ -57,7 +57,12 @@ $self = $_SERVER['PHP_SELF'];
 
 <body>
   <div class="wrapper">
-    <form class="container my-2" id="myForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+    <nav class="navbar navbar-dark bg-dark">
+      <h2>
+        Melgoza de la Torre Abraham
+      </h2>
+    </nav>
+    <form class="container " id="myForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
       <div class="contianer mb-3">
         <!-- hacer un select con el id de usuario -->
         <legend>Eliminar Cuentas</legend>

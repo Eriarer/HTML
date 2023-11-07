@@ -1,6 +1,11 @@
 * {
   font-size: small;
 }
+
+nav > h2 {
+  color: #fff;
+}
+
 body {
   background: #f4f4f4;
 }
