@@ -86,7 +86,7 @@ $self = $_SERVER['PHP_SELF'];
         </tbody>
       </table>
       <div class="d-flex flex-column justify-content-center">
-        <button type="submit" class="btn btn-dark">Eliminar</button>
+        <button type="submit" class="btn btn-dark">Editar</button>
       </div>
     </form>
   </div>
@@ -123,20 +123,25 @@ $self = $_SERVER['PHP_SELF'];
 
       function validarFormulario() {
         //validar que el id no sea clon de otro (si es el mismo id que el original es valido)
-
-
-        if (idExiste) {
-          globalThis.tooltipId = 'id';
-          //si el id existe
-          mostrarTooltip();
-          return false;
+        var id = document.getElementById('id').value;
+        var ogId = document.getElementById('ogId').value;
+        if (id != ogId) {
+          var idExiste = usuarios.some(function(usuario) {
+            return usuario.id == id;
+          });
+          if (idExiste) {
+            globalThis.tooltipId = 'id';
+            //si el id existe
+            mostrarTooltip("El id ya existe");
+            return false;
+          }
         }
       }
 
-      function mostrarTooltip() {
+      function mostrarTooltip(mensaje) {
         $("#" + tooltipId)
           .tooltip({
-            title: "Selecciona una respuesta",
+            title: mensaje || "Este campo es obligatorio",
             placement: "top", // Puedes ajustar la posición del tooltip según tus necesidades
             trigger: "manual",
           })
