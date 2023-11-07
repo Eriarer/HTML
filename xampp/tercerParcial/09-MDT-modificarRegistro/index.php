@@ -18,6 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $nombre = empty($_POST['nombre']) ? $usuarioOg['nombre'] : $_POST['nombre'];
   $cuenta = empty($_POST['cuenta']) ? $usuarioOg['cuenta'] : $_POST['cuenta'];
   $contrasena = empty($_POST['contrasena']) ? $usuarioOg['contrasena'] : $_POST['contrasena'];
+  //mostrat alerta de usuario editado con los datos nuevos y viejos
+  echo '<script>alert("Usuario editado con exito\n\nUsuario original:\nID: ' . $usuarioOg['id'] . '\nNombre: ' . $usuarioOg['nombre'] . '\nCuenta: ' . $usuarioOg['cuenta'] . '\nContraseña: ' . $usuarioOg['contrasena'] . '\n\nUsuario nuevo:\nID: ' . $id . '\nNombre: ' . $nombre . '\nCuenta: ' . $cuenta . '\nContraseña: ' . $contrasena . '");</script>';
   //actualizar los datos en la base de datos
   $sql = "UPDATE usuarios SET id='$id', nombre='$nombre', cuenta='$cuenta', contrasena='$contrasena' WHERE id='$idOg'";
   $conexion->query($sql);
@@ -65,7 +67,7 @@ $self = $_SERVER['PHP_SELF'];
     <form class="container " id="myForm" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
       <div class="contianer mb-3">
         <!-- hacer un select con el id de usuario -->
-        <legend>Eliminar Cuentas</legend>
+        <legend>Editar Cuentas</legend>
         <label for="ogId">Seleccionar usuario</label>
         <select class="browser-default custom-select" name='ogId' id="ogId">
           <?php
