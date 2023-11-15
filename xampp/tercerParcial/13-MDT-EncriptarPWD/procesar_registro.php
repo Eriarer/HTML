@@ -10,8 +10,11 @@ if (!$conexion)
 $usuario = $_POST['usuario'];
 $password = $_POST['password'];
 
-// Encriptar la contraseña
-$password_encriptada = password_hash($password, PASSWORD_BCRYPT);
+// Encriptar la contraseña usando Bcrypt
+$options = [
+  'cost' => 6, // puedes ajustar el costo según tus necesidades
+];
+$password_encriptada = password_hash($password, PASSWORD_BCRYPT, $options);
 
 // Insertar datos en la base de datos
 $query = "INSERT INTO usuarios (Usr_name, Usr_Pwd) VALUES ('$usuario', '$password_encriptada')";
