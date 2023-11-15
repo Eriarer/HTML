@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <h1 class="container text-center mt-2">Melgoza de la Torre Abraham</h1>
   <h4 id="Title" class="container text-center mt-5">Iniciar Sesión</h4>
   <form class="container mt-2 loginForm">
     <input type="text" value="login" name="formType" id="formType" hidden>
