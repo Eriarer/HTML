@@ -2,9 +2,25 @@
 $min = $_POST["min"];
 $max = $_POST["max"];
 $limit = $_POST["limit"];
-$numeros = '';
+
+// Inicializa arrays para labels y números
+$labels = array();
+$numbers = array();
+
+// Genera datos aleatorios
 for ($i = 0; $i < $limit; $i++) {
-  $numeros .= rand($min, $max);
-  $numeros .= $i + 1 == $limit ? '' : ',';
+  $labels[] = ($i + 1);
+  $numbers[] = rand($min, $max);
 }
-echo "$numeros";
+
+// Crea un array asociativo con ambos arrays
+$data = array(
+  'labels' => $labels,
+  'numbers' => $numbers
+);
+
+// Convierte el array en formato JSON
+$cadenaJson = json_encode($data);
+
+// Imprime el resultado
+echo $cadenaJson;
