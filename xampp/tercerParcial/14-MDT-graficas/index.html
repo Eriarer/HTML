@@ -1,205 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráficas</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <!-- bootstrap 4.6.2 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+    ></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gráficas</title>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <!-- bootstrap 4.6.2 -->
-  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css' integrity='sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N' crossorigin='anonymous' />
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <!-- Chart.js -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-
-<body>
-  <div class="text-center mx-3 h2">
-    Melgoza de la Torre Abraham.
-  </div>
-  <div class="container">
-    <div class="row row-cols-1">
-      <div class="col">
-        <canvas id="grafica"></canvas>
-      </div>
-      <div class="col">
-        <div class="input-group mb-2 mr-sm-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text" style="min-width: 4em;">min</div>
-          </div>
-          <input type="number" class="form-control" id="min" placeholder="Mínimo: 0">
+  <body>
+    <div class="text-center mx-3 h2">Melgoza de la Torre Abraham.</div>
+    <div class="container">
+      <div class="row row-cols-2">
+        <div class="col">
+          <canvas id="grafica1"></canvas>
         </div>
-        <div class="input-group mb-2 mr-sm-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text" style="min-width: 4em;">max</div>
-          </div>
-          <input type="number" class="form-control" id="max" placeholder="Máximo: 10">
+        <div class="col">
+          <canvas id="grafica2"></canvas>
         </div>
-        <div class="input-group mb-2 mr-sm-2">
-          <div class="input-group-prepend">
-            <div class="input-group-text" style="min-width: 4em;">bars</div>
+        <div class="col col-12">
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" style="min-width: 4em">min</div>
+            </div>
+            <input type="number" class="form-control" id="min" placeholder="Mínimo: 0" />
           </div>
-          <input type="number" class="form-control" id="limit" placeholder="Barras: 10">
-        </div>
-        <div class="d-flex justify-content-center">
-          <button id="randomizer" class="btn btn-info">Aleatorizar</button>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" style="min-width: 4em">max</div>
+            </div>
+            <input type="number" class="form-control" id="max" placeholder="Máximo: 10" />
+          </div>
+          <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <div class="input-group-text" style="min-width: 4em">bars</div>
+            </div>
+            <input
+              type="number"
+              class="form-control"
+              id="limit"
+              placeholder="Barras: 10"
+            />
+          </div>
+          <div class="d-flex justify-content-center">
+            <button id="randomizer" class="btn btn-info">Aleatorizar</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const MIN = 0;
-    const MAX = 10;
-    const LIMIT = 10;
-    const INPUT_MIN = 0;
-    const INPUT_MAX = 1000;
-    const INPUT_LIMIT = 100;
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const MIN = 0;
+      const MAX = 10;
+      const LIMIT = 10;
+      const INPUT_MIN = 0;
+      const INPUT_MAX = 1000;
+      const INPUT_LIMIT = 100;
 
-    $(document).ready(function() {
-      var ctx = document.getElementById('grafica').getContext('2d');
-      var myChart = createChart(ctx);
+      $(document).ready(function () {
+        var graph1 = document.getElementById("grafica1").getContext("2d");
+        var graph2 = document.getElementById("grafica2").getContext("2d");
 
-      $('#randomizer').click(function() {
-        var min = $('#min').val() ? parseInt($('#min').val()) : 0;
-        var max = $('#max').val() ? parseInt($('#max').val()) : 10;
-        var limit = $('#limit').val() ? parseInt($('#limit').val()) : 10;
+        var datas = [];
+        var labels = [];
 
-        $.ajax({
-          type: "POST",
-          url: "randomNumber.php",
-          data: {
-            min: min,
-            max: max,
-            limit: limit
-          },
-          success: function(data) {
-            var datas = data.split(',');
-            var labels = [];
-            for (let i = 0; i < datas.length; i++) {
-              labels.push(i + 1);
-            }
-            // max sera siempre multiplo de 5
-            max = Math.ceil(max / 5) * 5;
-            var ticksStep = max > 5 ? max / 10 : 1;
+        var myChart1;
+        var myChart2;
 
+        // Llamada a la función fetchData usando una promesa
+        fetchData(MIN, MAX, LIMIT)
+          .then(function (jsonData) {
+            // Asigna los valores a los vectores
+            labels = jsonData.labels;
+            datas = jsonData.numbers;
 
-            myChart.data.labels = labels;
-            myChart.data.datasets[0].data = datas;
-            myChart.options.scales.y.max = max;
-            myChart.options.scales.y.ticks.stepSize = ticksStep;
+            myChart1 = createBarChart(graph1, datas, labels);
+            myChart2 = createLineChart(graph2, datas, labels);
+          })
+          .catch(function (error) {
+            console.error("Error al obtener los datos:", error);
+          });
 
-            // Inicia la animación
-            myChart.update();
-          }
+        $("#randomizer").click(function () {
+          var min = $("#min").val() ? parseInt($("#min").val()) : 0;
+          var max = $("#max").val() ? parseInt($("#max").val()) : 10;
+          var limit = $("#limit").val() ? parseInt($("#limit").val()) : 10;
+
+          var datas = [];
+          var labels = [];
+
+          // Llamada a la función fetchData usando una promesa
+          fetchData(min, max, limit)
+            .then(function (jsonData) {
+              // Asigna los valores a los vectores
+              labels = jsonData.labels;
+              datas = jsonData.numbers;
+
+              // max sera siempre multiplo de 5
+              max = Math.ceil(max / 5) * 5;
+              var ticksStep = max > 5 ? max / 10 : 1;
+
+              //actualizar graficas
+              updateChart(myChart1, datas, labels, max, ticksStep);
+              updateChart(myChart2, datas, labels, max, ticksStep);
+            })
+            .catch(function (error) {
+              console.error("Error al obtener los datos:", error);
+            });
+        });
+
+        $("#min").on("input change", function () {
+          verifyMin();
+        });
+
+        $("#max").on("input change", function () {
+          verifyMax();
+        });
+
+        $("#limit").on("input  change", function () {
+          verifyLimit();
         });
       });
 
-      $('#min').on('input change', function() {
-        verifyMin();
-      });
+      function updateChart(chart, datas, labels, max, ticksStep) {
+        chart.data.labels = labels;
+        chart.data.datasets[0].data = datas;
+        chart.options.scales.y.max = max;
+        chart.options.scales.y.ticks.stepSize = ticksStep;
+        chart.update();
+      }
 
-      $('#max').on('input change', function() {
-        verifyMax();
-      });
-
-      $('#limit').on('input  change', function() {
-        verifyLimit();
-      });
-    });
-
-    function verifyLimit() {
-      if ($('#limit').val() != '') {
-        var limit = parseInt($('#limit').val());
-        if (limit < 1) {
-          $('#limit').val(1);
-        } else if (limit > INPUT_LIMIT) {
-          $('#limit').val(INPUT_LIMIT);
+      function verifyLimit() {
+        if ($("#limit").val() != "") {
+          var limit = parseInt($("#limit").val());
+          if (limit < 1) {
+            $("#limit").val(1);
+          } else if (limit > INPUT_LIMIT) {
+            $("#limit").val(INPUT_LIMIT);
+          }
         }
       }
-    }
 
-    function verifyMax() {
-      if ($('#max').val() != '') {
-        var max = parseInt($('#max').val());
-        if (max < INPUT_MIN) {
-          $('#max').val(INPUT_MIN);
-          $('#min').val(INPUT_MIN);
-        } else if (max > INPUT_MAX) {
-          $('#max').val(INPUT_MAX);
+      function verifyMax() {
+        if ($("#max").val() != "") {
+          var max = parseInt($("#max").val());
+          if (max < INPUT_MIN) {
+            $("#max").val(INPUT_MIN);
+            $("#min").val(INPUT_MIN);
+          } else if (max > INPUT_MAX) {
+            $("#max").val(INPUT_MAX);
+          }
+        }
+        if ($("#min").val() == "") {
+          $("#min").val(max < 0 ? max : "");
+        } else {
+          var min = parseInt($("#min").val());
+          var max = parseInt($("#max").val());
+          if (max < min) {
+            $("#min").val(max);
+          }
         }
       }
-      if ($('#min').val() == '') {
-        $('#min').val(max < 0 ? max : '');
-      } else {
-        var min = parseInt($('#min').val());
-        var max = parseInt($('#max').val());
-        if (max < min) {
-          $('#min').val(max);
+
+      function verifyMin() {
+        if ($("#min").val() != "") {
+          var min = parseInt($("#min").val());
+          if (min < INPUT_MIN) {
+            $("#min").val(INPUT_MIN);
+          } else if (min > INPUT_MAX) {
+            $("#min").val(INPUT_MAX);
+            $("#max").val(INPUT_MAX);
+          }
+        }
+        if ($("#max").val() == "") {
+          $("#max").val(min > 10 ? min : "");
+        } else {
+          var max = parseInt($("#max").val());
+          var min = parseInt($("#min").val());
+          if (min > max) {
+            $("#max").val(min);
+          }
         }
       }
-    }
 
-    function verifyMin() {
-      if ($('#min').val() != '') {
-        var min = parseInt($('#min').val());
-        if (min < INPUT_MIN) {
-          $('#min').val(INPUT_MIN);
-        } else if (min > INPUT_MAX) {
-          $('#min').val(INPUT_MAX);
-          $('#max').val(INPUT_MAX);
-        }
+      function fetchData(min, max, limit) {
+        return new Promise(function (resolve, reject) {
+          $.ajax({
+            type: "POST",
+            url: "randomNumber.php",
+            data: {
+              min: min,
+              max: max,
+              limit: limit,
+            },
+            success: function (data) {
+              resolve(JSON.parse(data));
+            },
+            error: function (xhr, status, error) {
+              reject(error);
+            },
+          });
+        });
       }
-      if ($('#max').val() == '') {
-        $('#max').val(min > 10 ? min : '');
-      } else {
-        var max = parseInt($('#max').val());
-        var min = parseInt($('#min').val());
-        if (min > max) {
-          $('#max').val(min);
-        }
-      }
-    }
 
-
-    function createChart(ctx) {
-      var datas = [];
-      var labels = [];
-      for (let i = 0; i < LIMIT; i++) {
-        // generar números aleatorios entre 0 y 10
-        datas.push(Math.floor(Math.random() * MAX) + MIN);
-        labels.push(i + 1);
-      }
-      return new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: labels,
-          datasets: [{
-            data: datas,
-            label: 'cantidad',
-            borderWidth: 1
-          }]
-        },
-        options: {
-          scales: {
-            y: {
-              beginAtZero: true,
-              max: 10
-            }
-          }, //ocultar leyenda
-          plugins: {
-            legend: {
-              display: false,
-            }
+      function createBarChart(ctx, datas, labels) {
+        return new Chart(ctx, {
+          type: "bar",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                data: datas,
+                label: "cantidad",
+                backgroundColor: "rgba(75, 192, 192, 0.2)", // Cambia el color de fondo de las barras
+                borderColor: "rgba(75, 192, 192, 1)", // Cambia el color del borde de las barras
+                borderWidth: 2, // Cambia el ancho del borde de las barras
+              },
+            ],
           },
-          responsive: true,
-        }
-      });
-    }
-  </script>
-</body>
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 10,
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+            responsive: true,
+          },
+        });
+      }
 
+      function createLineChart(ctx, datas, labels) {
+        return new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: labels,
+            datasets: [
+              {
+                data: datas,
+                label: "cantidad",
+                borderColor: "rgba(255, 99, 132, 1)", // Cambia el color de la línea
+                borderWidth: 2, // Cambia el ancho de la línea
+                fill: false, // Desactiva el relleno bajo la línea
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+                max: 10,
+              },
+            },
+            plugins: {
+              legend: {
+                display: false,
+              },
+            },
+            responsive: true,
+          },
+        });
+      }
+    </script>
+  </body>
 </html>
